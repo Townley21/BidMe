@@ -10,7 +10,7 @@ public interface UsersListDAO {
 	
 	public User getUser(String email) throws SQLException;
 	
-	public void update(User user)throws SQLException;
+	public void updateUser(User user)throws SQLException;
 	
-	public void delete(User user)throws SQLException;
+	public void deleteUser(User user)throws SQLException;
 }
