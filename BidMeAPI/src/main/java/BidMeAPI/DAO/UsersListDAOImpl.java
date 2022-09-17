@@ -94,6 +94,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 		preparedStatement.setString(3, user.getPassword());
 		preparedStatement.setString(4, user.getAddress());
 		preparedStatement.setBoolean(5, user.getContractor());
+		preparedStatement.setInt(6, user.getUserID());
 		preparedStatement.executeUpdate();
 		
 	}
