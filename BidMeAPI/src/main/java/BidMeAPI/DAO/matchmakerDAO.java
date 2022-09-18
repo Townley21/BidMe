@@ -12,6 +12,6 @@ public interface matchmakerDAO {
 	
 	public void updateMatchmaker(Matchmaker matchmake) throws SQLException;
 	
-	public Matchmaker getMatchmaker(Matchmaker matchmake) throws SQLException;
+	public Matchmaker getMatchmaker(int id) throws SQLException;
 	
 }
