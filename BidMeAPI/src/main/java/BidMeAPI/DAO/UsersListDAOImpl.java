@@ -82,6 +82,39 @@ public class UsersListDAOImpl implements UsersListDAO {
 		
 		return user;
 	}
+	
+	@Override
+	public User getUser(int id) throws SQLException{
+		
+		User user = null;
+		int userID = id;
+		String name;
+		String userEmail;
+		String password;
+		String address;
+		boolean contractor;
+		
+		Connection conn = connectToDB();
+		PreparedStatement preparedStatement = conn.prepareStatement(GET_USER);
+		preparedStatement.setInt(1, userID);
+		
+		ResultSet rs = preparedStatement.executeQuery();
+		
+		while(rs.next()) {
+			userID = rs.getInt("userID");
+			name = rs.getString("name");
+			userEmail = rs.getString("email");
+			password = rs.getString("password");
+			address = rs.getString("address");
+			contractor = rs.getBoolean("contractor");
+			
+			user = new User(userID, name, userEmail, password, address, contractor);
+		}
+		
+		
+		
+		return user;
+	}
 
 	@Override
 	public void updateUser(User user) throws SQLException{

@@ -27,8 +27,8 @@ public class Bid {
 		this.bidID = bidID;
 	}
 	
-	public int getUserID() {
-		return user.getUserID();
+	public User getUser() {
+		return this.user;
 	}
 	
 	public void setUser(User user) {
@@ -43,7 +43,7 @@ public class Bid {
 		this.price = price;
 	}
 	
-	public boolean isNullBids() {
+	public boolean getNullBids() {
 		return nullBids;
 	}
 	

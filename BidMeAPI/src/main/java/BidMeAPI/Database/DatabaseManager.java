@@ -17,7 +17,6 @@ public class DatabaseManager {
 		try {
 			Class.forName(DRIVER);
 			conn = DriverManager.getConnection(URL, USER, PASSWORD);
-			System.out.println("Successful Connection.");
 		}
 			catch (Exception e) {
 			System.out.println("Unsucessful connection.");

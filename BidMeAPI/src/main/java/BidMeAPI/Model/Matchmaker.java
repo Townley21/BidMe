@@ -12,16 +12,16 @@ public class Matchmaker {
 		this.listing = listing;
 	}
 	
-	public int getBidID() {
-		return bid.getBidID();
+	public Bid getBid() {
+		return this.bid;
 	}
 	
 	public void setBid(Bid bid) {
 		this.bid = bid;
 	}
 
-	public int getListingID() {
-		return this.listing.getListingID();
+	public Listing getListing() {
+		return this.listing;
 	}
 
 	public void setListing(Listing listing) {
