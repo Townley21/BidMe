@@ -2,24 +2,18 @@ package BidMeAPI.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import BidMeAPI.Model.Bid;
-import BidMeAPI.Model.Listing;
 import BidMeAPI.Model.Matchmaker;
 
-public class MatchmakerDAOImpl implements matchmakerDAO {
+public class matchmakerDAOImpl implements matchmakerDAO {
 	
-	final static String CREATE_MATCHMAKER = "INSERT INTO BidMeUsers.matchmaker " + "(mmID, bidID, listingID) VALUES" + "(?, ?, ?);";
-	final static String DELETE_MATCHMAKER = "DELETE FROM BidMeUsers.matchmaker WHERE mmID = ?";
-	final static String UPDATE_MATCHMAKER = "UPDATE BidMeUsers.matchmaker SET bidID = ?, listingID WHERE mm = ?;";
-	
-	ListingTableDAOImpl listingDAO = new ListingTableDAOImpl();
-	BidTableDAOImpl bidDAO = new BidTableDAOImpl();
+	final static String CREATE_MATCHMAKER = "INSERT INTO BidMeUsers.matchmaker " + "(mm-id, bid-id, listing-id) VALUES" + "(?, ?, ?);";
+	final static String DELETE_MATCHMAKER = "DELETE FROM BidMeUsers.matchmaker WHERE mm-id = ?";
+	final static String UPDATE_MATCHMAKER = "UPDATE BidMeUsers.matchmaker SET bid-id = ?, listing-id WHERE mm = ?;";
 	
 	//TODO Decide what the getter parameter will be
-	final static String GET_MATCHMAKER = "SELECT * FROM BidMeUsers.matchmaker WHERE mmID = ?";
+	final static String GET_MATCHMAKER = "SELECT * FROM BidMeUsers.matchmaker WHERE  = ?";
 	
 	public Connection connectToDB() throws SQLException {
 		
@@ -32,17 +26,17 @@ public class MatchmakerDAOImpl implements matchmakerDAO {
 	public Matchmaker createMatchmaker(Matchmaker mm) throws SQLException {
 		
 		int mmID = mm.getMmID();
-		Bid bid = mm.getBid();
-		Listing listing = mm.getListing();
-		Matchmaker matchmaker = new Matchmaker(mmID, bid, listing);
+		int bidID = mm.getBidID();
+		int listingID = mm.getListingID();
+		Matchmaker matchmaker = new Matchmaker(mmID, bidID, listingID);
 		
 		Connection conn = connectToDB();
 		
 		PreparedStatement preparedstatement = conn.prepareStatement(CREATE_MATCHMAKER);
 		
 		preparedstatement.setInt(1, mmID);
-		preparedstatement.setInt(2, bid.getBidID());
-		preparedstatement.setInt(3, listing.getListingID());
+		preparedstatement.setInt(2, bidID);
+		preparedstatement.setInt(3, listingID);
 		
 		preparedstatement.executeUpdate();
 		
@@ -69,15 +63,15 @@ public class MatchmakerDAOImpl implements matchmakerDAO {
 	public void updateMatchmaker(Matchmaker mm) throws SQLException {
 		
 		int mmID = mm.getMmID();
-		Bid bid = mm.getBid();
-		Listing listing = mm.getListing();
+		int bidID = mm.getBidID();
+		int listingID = mm.getListingID();
 		
 		Connection conn = connectToDB();
 		
 		PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_MATCHMAKER);
 		
-		preparedStatement.setInt(1, bid.getBidID());
-		preparedStatement.setInt(2, listing.getListingID());
+		preparedStatement.setInt(1, bidID);
+		preparedStatement.setInt(2, listingID);
 		preparedStatement.setInt(3, mmID);
 		
 		preparedStatement.executeUpdate();
@@ -86,25 +80,8 @@ public class MatchmakerDAOImpl implements matchmakerDAO {
 	}
 
 	@Override
-	public Matchmaker getMatchmaker(int id) throws SQLException {
+	public Matchmaker getMatchmaker(Matchmaker mm) throws SQLException {
 		
-		Matchmaker mm;
-		int mmID = id;
-		Bid bid;
-		Listing listing;
-		
-		Connection conn = connectToDB();
-		PreparedStatement preparedstatement = conn.prepareStatement(GET_MATCHMAKER);
-		ResultSet rs = preparedstatement.executeQuery();
-		
-		while(rs.next()) {
-			mmID = rs.getInt(mmID);
-			bid = bidDAO.getBid(rs.getInt("bidID"));
-			listing = listingDAO.getListing(rs.getInt("listingID"));
-			
-			
-			mm = new Matchmaker(id, bid, listing);
-		}
 		return null;
 	}
 
