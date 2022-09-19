@@ -2,7 +2,6 @@ package BidMeAPI.Model;
 
 public class HistoricalListing {
 	
-	
 	private Listing listing;
 	private User user;
 	
@@ -24,8 +23,5 @@ public class HistoricalListing {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	
-	
 
 }

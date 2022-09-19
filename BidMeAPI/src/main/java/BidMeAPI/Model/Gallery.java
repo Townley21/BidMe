@@ -2,17 +2,27 @@ package BidMeAPI.Model;
 
 public class Gallery {
 
-	private Byte[] image;
+	private int galleryID;
 	private int entryID;
 	private Listing listing;
+	private Byte[] image;
 	
-	public Gallery(Byte[] image, int entryID, Listing listing) {
+	public Gallery(int galleryID, int entryID, Listing listing, Byte[] image) {
 		super();
-		this.image = image;
+		this.galleryID = galleryID;
 		this.entryID = entryID;
 		this.listing = listing;
+		this.image = image;
 	}
-	
+
+	public int getGalleryID() {
+		return galleryID;
+	}
+
+	public void setGalleryID(int galleryID) {
+		this.galleryID = galleryID;
+	}
+
 	public Byte[] getImage() {
 		return image;
 	}
