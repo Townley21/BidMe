@@ -1,5 +1,7 @@
 package BidMeAPI.Model;
 
+import java.sql.SQLException;
+
 public class User {
 
 	private int userID;

@@ -11,12 +11,13 @@ import java.sql.SQLException;
 
 public class HistoricalListingsDAOImpl implements HistoricalListingsDAO {
 
-    final static String CREATE_HISTORICALLISTING = "INSERT INTO BidMeUsers.historicalListings " + "(listingID, userID) VALUES" + "(?, ?);";
-    final static String GET_HISTORICALLISTING = "SELECT * FROM BidMeUsers.historicalListings WHERE listingID = ? AND userID = ?;";
-    final static String DELETE_HISTORICALLISTING = "DELETE FROM BidMeUsers.historicalListings WHERE listingID = ? AND userID = ?;";
-    final static String UPDATE_HISTORICALLISTING = "UPDATE BidMeUsers.historicalListings SET listingID = ?, userID = ? WHERE listingID = ? AND userID = ?;";
+    final static String CREATE_HISTORICAL_LISTING = "INSERT INTO BidMeUsers.historicalListings " + "(entryID, listingID, userID) VALUES" + "(?, ?, ?);";
+    final static String GET_HISTORICAL_LISTING = "SELECT * FROM BidMeUsers.historicalListings WHERE userID = ?;";
+    final static String DELETE_HISTORICAL_LISTING = "DELETE FROM BidMeUsers.historicalListings WHERE listingID = ?";
+    final static String UPDATE_HISTORICAL_LISTING = "UPDATE BidMeUsers.historicalListings SET userID = ? WHERE listingID = ?;";
 
-    UsersListDAOImpl userDao;
+    UsersListDAOImpl userDao = new UsersListDAOImpl();
+    ListingTableDAOImpl listingDao = new ListingTableDAOImpl();
 
     public Connection connectToDB() throws SQLException {
 
@@ -27,72 +28,74 @@ public class HistoricalListingsDAOImpl implements HistoricalListingsDAO {
 
 
     @Override
-    public HistoricalListing createHistoricalListing(Listing listing, User user) throws SQLException {
+    public HistoricalListing createHistoricalListing(HistoricalListing HListing) throws SQLException {
 
-        int listingID = listing.getListingID();
-        int userID = listing.getUserID();
+    	int id = HListing.getId();
+        int listingID = HListing.getListing().getListingID();
+        int userID = HListing.getUser().getUserID();
 
         Connection connection = connectToDB();
 
-        PreparedStatement preparedStatement = connection.prepareStatement(CREATE_HISTORICALLISTING);
+        PreparedStatement preparedStatement = connection.prepareStatement(CREATE_HISTORICAL_LISTING);
 
-        preparedStatement.setLong(1, listingID);
-        preparedStatement.setLong(2, userID);
+        preparedStatement.setLong(1, id);
+        preparedStatement.setLong(2, listingID);
+        preparedStatement.setLong(3, userID);
 
         preparedStatement.executeUpdate();
 
         return null;
     }
 
-
-    //Needs to be looked over, not correctly implemented.
     @Override
-    public HistoricalListing getHistoricalListing(int listID, int userID) throws SQLException{
+    public HistoricalListing getHistoricalListing(int userID) throws SQLException{
 
-        HistoricalListing listing = null;
-        int listingID = listID;
+        HistoricalListing HListing = null;
+        Listing listing = null;
+        int tempID = userID;
+        int id;
 
         User user;
 
         Connection conn = connectToDB();
-        PreparedStatement preparedStatement = conn.prepareStatement(GET_HISTORICALLISTING);
-        preparedStatement.setInt(1, listingID);
+        PreparedStatement preparedStatement = conn.prepareStatement(GET_HISTORICAL_LISTING);
+        preparedStatement.setInt(1, userID);
 
         ResultSet rs = preparedStatement.executeQuery();
 
         while(rs.next()) {
-            listingID = rs.getInt("listingID");
-            user = userDao.getUser(listingID);
+        	id = rs.getInt("entryID");
+            listing = listingDao.getListing(rs.getInt("listingID"));
+            user = userDao.getUser(tempID);
 
-            listing = new HistoricalListing(listing, user);
+            HListing = new HistoricalListing(id, listing, user);
         }
 
-        return listing;
+        return HListing;
     }
 
     @Override
-    public void updateHistoricalListing(Listing listing, User user) throws SQLException{
+    public void updateHistoricalListing(HistoricalListing HListing) throws SQLException{
 
         Connection conn = connectToDB();
-        PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_HISTORICALLISTING);
+        PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_HISTORICAL_LISTING);
 
-        preparedStatement.setLong(1, listing.getListingID());
-        preparedStatement.setLong(2, user.getUserID());
-
+        preparedStatement.setLong(1, HListing.getUser().getUserID());
+        preparedStatement.setLong(2, HListing.getListing().getListingID());
         preparedStatement.executeUpdate();
-
+        
+        return;
     }
 
     @Override
-    public void deleteHistoricalListing(Listing listing, User user) throws SQLException{
+    public void deleteHistoricalListing(HistoricalListing HListing) throws SQLException{
 
-        int listingID = listing.getListingID();
-        int userID = user.getUserID();
+        int listingID = HListing.getListing().getListingID();
+        int userID = HListing.getUser().getUserID();
 
         Connection conn = connectToDB();
-        PreparedStatement preparedStatement = conn.prepareStatement(DELETE_HISTORICALLISTING);
+        PreparedStatement preparedStatement = conn.prepareStatement(DELETE_HISTORICAL_LISTING);
         preparedStatement.setInt(1, listingID);
-        preparedStatement.setInt(2, userID);
 
         preparedStatement.executeUpdate();
 
