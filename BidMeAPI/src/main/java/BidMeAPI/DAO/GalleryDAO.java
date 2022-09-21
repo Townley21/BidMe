@@ -12,6 +12,6 @@ public interface GalleryDAO {
 
     public void updateGallery(Gallery gallery) throws SQLException;
 
-    public void deleteGallery(Gallery gallery) throws SQLException;
+    public void deleteGallery(int galleryID) throws SQLException;
 
 }

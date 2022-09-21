@@ -75,11 +75,30 @@ public class GalleryDAOImpl implements GalleryDAO {
     @Override
     public void updateGallery(Gallery gallery) throws SQLException{
     	
+    	int galleryID = gallery.getGalleryID();
+    	byte[] photo = gallery.getImage();
+    	
+    	Connection conn = connectToDB();
+    	
+    	PreparedStatement ps = conn.prepareStatement(UPDATE_GALLERY);
+    	
+    	ps.setBytes(1, photo);
+    	ps.setInt(2, galleryID);
+    	
+    	ps.executeQuery();
+    	
     }
 
     @Override
-    public void deleteGallery(Gallery gallery) throws SQLException{
-
+    public void deleteGallery(int galleryID) throws SQLException{
+    	
+    	int id = galleryID;
+    	
+    	Connection conn = connectToDB();
+    	
+    	PreparedStatement ps = conn.prepareStatement(DELETE_GALLERY);
+    	
+    	ps.setInt(1, id);
     }
 
 }
