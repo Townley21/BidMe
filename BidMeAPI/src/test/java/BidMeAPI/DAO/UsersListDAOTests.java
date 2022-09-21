@@ -12,7 +12,7 @@ import BidMeAPI.DAO.*;
 class UsersListDAOTests {
 
 	public int id = 5;
-	public String name = "Norm MacDonalad";
+	public String name = "Tim O'Shea";
 	public String email = "funnyguy@gmail.com";
 	public String password = "comedian";
 	public String address = "466 something drive";

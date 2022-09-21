@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class GalleryDAOImpl {
+public class GalleryDAOImpl implements GalleryDAO {
 
     final static String CREATE_GALLERY = "INSERT INTO BidMeUsers.gallery " + "(galleryID, entryID, photo) VALUES" + "(?, ?, ?);";
     final static String GET_GALLERY = "SELECT * FROM BidMeUsers.gallery WHERE galleryID = ?;";
@@ -26,21 +26,19 @@ public class GalleryDAOImpl {
     }
 
     @Override
-    public Gallery createGallery(Gallery gallery) throws SQLException{
+    public Gallery createGallery(Gallery gallery) throws SQLException {
 
         int galleryID = gallery.getGalleryID();
         int entryID = gallery.getEntryID();
-        Listing listing = gallery.getListing();
-        Byte[] image = gallery.getImage();
+        byte[] image = gallery.getImage();
 
         Connection connection = connectToDB();
 
         PreparedStatement preparedStatement = connection.prepareStatement(CREATE_GALLERY);
 
-        preparedStatement.setByte(1, galleryID);
+        preparedStatement.setInt(1, galleryID);
         preparedStatement.setLong(2, entryID);
-        preparedStatement.setLong(3, gallery.getListing(););
-        preparedStatement.setBlob(4, image);
+        preparedStatement.setBytes(3, image);
 
         preparedStatement.executeUpdate();
 
@@ -51,34 +49,32 @@ public class GalleryDAOImpl {
     public Gallery getGallery(int galleryID) throws SQLException{
 
         Gallery gallery = null;
-        int galleryID = galleryID;
-        Listing listing;
+        int id = galleryID;
+        int entryID;
+        byte[] photo;
 
         Connection conn = connectToDB();
         PreparedStatement preparedStatement = conn.prepareStatement(GET_GALLERY);
-        preparedStatement.setInt(1, galleryID);
+        preparedStatement.setInt(1, id);
 
         ResultSet rs = preparedStatement.executeQuery();
 
         while(rs.next()) {
-            galleryID = rs.getInt("galleryID");
-            user = userDao.getUser(listingID);
-            listingTitle = rs.getString("title");
-            address = rs.getString("address");
-            galleryID = rs.getInt("galleryID");
-            price = rs.getDouble("price");
+            id = rs.getInt("galleryID");
+            entryID = rs.getInt("entryID");
+            photo = rs.getBytes("photo");
 
-            listing = new Listing(listingID, user, listingTitle, address, galleryID, price);
+            gallery = new Gallery(id, entryID, photo);
         }
 
 
 
-        return listing;
+        return gallery;
     }
 
     @Override
     public void updateGallery(Gallery gallery) throws SQLException{
-
+    	
     }
 
     @Override

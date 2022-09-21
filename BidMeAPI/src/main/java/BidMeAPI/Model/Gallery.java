@@ -4,14 +4,12 @@ public class Gallery {
 
 	private int galleryID;
 	private int entryID;
-	private Listing listing;
-	private Byte[] image;
+	private byte[] image;
 	
-	public Gallery(int galleryID, int entryID, Listing listing, Byte[] image) {
+	public Gallery(int galleryID, int entryID, byte[] image) {
 		super();
 		this.galleryID = galleryID;
 		this.entryID = entryID;
-		this.listing = listing;
 		this.image = image;
 	}
 
@@ -23,11 +21,11 @@ public class Gallery {
 		this.galleryID = galleryID;
 	}
 
-	public Byte[] getImage() {
+	public byte[] getImage() {
 		return image;
 	}
 	
-	public void setImage(Byte[] image) {
+	public void setImage(byte[] image) {
 		this.image = image;
 	}
 	
@@ -38,15 +36,6 @@ public class Gallery {
 	public void setEntryID(int entryID) {
 		this.entryID = entryID;
 	}
-	
-	public Listing getListing() {
-		return listing;
-	}
-	
-	public void setListing(Listing listing) {
-		this.listing = listing;
-	}
-	
 	
 	
 }
