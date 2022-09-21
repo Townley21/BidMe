@@ -11,10 +11,10 @@ import BidMeAPI.Model.User;
 
 public class BidTableDAOImpl implements BidTableDAO {
 	
-	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bid-id, user-id, price, null-bids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
-	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bid-id = ?;";
-	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bid-id = ?;";
-	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET user-id = ?, price = ?, null-bids = ?, timestamp = ? bid-id = ?;";
+	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bidID, userID, price, nullBids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
+	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bidID = ?;";
+	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bidID = ?;";
+	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET userID = ?, price = ?, nullBids = ?, timestamp = ? bidID = ?;";
 
 	UsersListDAOImpl userDAO = new UsersListDAOImpl();
 	
@@ -30,21 +30,23 @@ public class BidTableDAOImpl implements BidTableDAO {
 		
 		int bidID = bid.getBidID();
 		User user = bid.getUser();
+		int userID = user.getUserID();
 		double price = bid.getPrice();
 		boolean bids = bid.getNullBids();
 		Timestamp timestamp = bid.getTimestamp();
 		Bid newbid = new Bid(user, bidID, price, bids, timestamp);
 		
+		
 		Connection conn = connectToDB();
 		PreparedStatement ps = conn.prepareStatement(CREATE_BID);
 		
 		ps.setInt(1, bidID);
-		ps.setInt(2, user.getUserID());
+		ps.setInt(2, userID);
 		ps.setDouble(3, price);
 		ps.setBoolean(4, bids);
 		ps.setTimestamp(5, timestamp);
 		
-		ps.executeQuery();
+		ps.executeUpdate();
 		
 		return newbid;
 	}
@@ -66,10 +68,10 @@ public class BidTableDAOImpl implements BidTableDAO {
 		ResultSet rs = ps.executeQuery();
 		
 		while (rs.next()) {
-			bidID = rs.getInt("bid-id");
-			user = userDAO.getUser(rs.getInt("user-id"));
+			bidID = rs.getInt("bidID");
+			user = userDAO.getUser(rs.getInt("userID"));
 			price = rs.getDouble("price");
-			bids = rs.getBoolean("null-bids");
+			bids = rs.getBoolean("nullBids");
 			timestamp = rs.getTimestamp("timestamp");
 			
 			getbid = new Bid(user, bidID, price, bids, timestamp);
@@ -88,7 +90,7 @@ public class BidTableDAOImpl implements BidTableDAO {
 	}
 
 	@Override
-	public void updateVid(Bid bid) throws SQLException {
+	public void updateBid(Bid bid) throws SQLException {
 		
 		Connection conn = connectToDB();
 		PreparedStatement ps = conn.prepareStatement(UPDATE_BID);

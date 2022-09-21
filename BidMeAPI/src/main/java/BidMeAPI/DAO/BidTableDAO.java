@@ -12,6 +12,6 @@ public interface BidTableDAO {
 	
 	public void deleteBid(int bidID) throws SQLException;
 	
-	public void updateVid(Bid bid) throws SQLException;
+	public void updateBid(Bid bid) throws SQLException;
 
 }
