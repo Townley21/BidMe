@@ -7,8 +7,25 @@ import org.junit.jupiter.api.Test;
 class GalleryDAOTests {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testCreateGallery() {
+		System.out.println("testing create gallery...");
+		
+		
+	}
+	
+	@Test
+	void testGetGallery() {
+		
+	}
+	
+	@Test
+	void testUpdateGallery() {
+		
+	}
+	
+	@Test
+	void testDeleteGallery() {
+		
 	}
 
 }

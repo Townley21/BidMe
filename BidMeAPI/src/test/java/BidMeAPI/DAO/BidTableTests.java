@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 import org.junit.jupiter.api.Test;
 
 import BidMeAPI.Model.Bid;
+import BidMeAPI.Model.Listing;
 import BidMeAPI.Model.User;
 
 class BidTableTests {
@@ -27,6 +28,8 @@ class BidTableTests {
 	User user = new User(id, name, email, password, address, contractor);
 	
 	Bid bid = new Bid(user, bidID, price, nullBids, timestamp);
+	
+	Listing listing = new Listing(1, user, "concrete", "123 fake st.", 0, 0);
 	
 	BidTableDAOImpl bidDAO = new BidTableDAOImpl();
 	
