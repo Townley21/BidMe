@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.io.File;
 import java.sql.SQLException;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class GalleryDAOTests {
@@ -40,13 +41,29 @@ class GalleryDAOTests {
 	}
 	
 	@Test
-	void testGetGallery() {
+	void testGetGallery() throws SQLException {
+		System.out.println("Testing get gallery...");
 		
+		Gallery newGallery = galleryDAO.getGallery(1);
+		
+		assertEquals(newGallery, galleryDAO.getGallery(1));
 	}
-	
+
 	@Test
-	void testUpdateGallery() {
+	void testUpdateGallery() throws SQLException {
+		System.out.println("Testing update gallery");
 		
+		byte[] newimage;
+		File fi = new File("images/tools.jpg");
+		
+		try {
+			newimage = Files.readAllBytes(fi.toPath());
+			gallery.setImage(newimage);
+			galleryDAO.updateGallery(gallery);
+			assertEquals(newimage, galleryDAO.getGallery(1).getImage());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Test

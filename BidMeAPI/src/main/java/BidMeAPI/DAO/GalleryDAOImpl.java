@@ -85,7 +85,7 @@ public class GalleryDAOImpl implements GalleryDAO {
     	ps.setBytes(1, photo);
     	ps.setInt(2, galleryID);
     	
-    	ps.executeQuery();
+    	ps.executeUpdate();
     	
     }
 
