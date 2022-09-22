@@ -14,7 +14,7 @@ public class BidTableDAOImpl implements BidTableDAO {
 	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bidID, userID, price, nullBids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
 	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bidID = ?;";
 	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bidID = ?;";
-	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET userID = ?, price = ?, nullBids = ?, timestamp = ? bidID = ?;";
+	final static String UPDATE_BID = "UPDATE BidMeUsers.bidTable SET userID = ?, price = ?, nullBids = ?, timestamp = ? WHERE bidID = ?;";
 
 	UsersListDAOImpl userDAO = new UsersListDAOImpl();
 	
@@ -92,12 +92,17 @@ public class BidTableDAOImpl implements BidTableDAO {
 	@Override
 	public void updateBid(Bid bid) throws SQLException {
 		
+		Timestamp timestamp = bid.getTimestamp();
+		
 		Connection conn = connectToDB();
 		PreparedStatement ps = conn.prepareStatement(UPDATE_BID);
+		
 		ps.setInt(1, bid.getUser().getUserID());
 		ps.setDouble(2, bid.getPrice());
 		ps.setBoolean(3, bid.getNullBids());
-		ps.setTimestamp(4, bid.getTimestamp());
+		ps.setTimestamp(4, timestamp);
+		ps.setInt(5, bid.getBidID());
+		ps.executeUpdate();
 		
 		
 	}
