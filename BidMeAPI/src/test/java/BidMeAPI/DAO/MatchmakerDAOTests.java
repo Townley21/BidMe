@@ -42,18 +42,27 @@ class MatchmakerDAOTests {
 		
 		mmDAO.createMatchmaker(mm);
 		
-		assertNotNull(mmDAO.getMatchmaker(2));
+		assertNotNull(mmDAO.getMatchmaker(bidID));
 		
 	}
 	
 	@Test
-	void testGetMatchmaker() {
+	void testGetMatchmaker() throws SQLException {
+		System.out.println("Testing get matchmaker...");
 		
+		assertNotNull(mmDAO.getMatchmaker(bidID));
 	}
 	
 	@Test
-	void testUpdateMatchmaker() {
+	void testUpdateMatchmaker() throws SQLException {
+		System.out.println("Testing update matchmaker...");
 		
+		double newPrice = 456;
+		
+		mmDAO.getMatchmaker(bidID).getBid().setPrice(newPrice);
+		
+		mmDAO.updateMatchmaker(mm);
+		assertEquals(newPrice, mmDAO.getMatchmaker(bidID).getBid().getPrice());
 	}
 	
 	@Test
