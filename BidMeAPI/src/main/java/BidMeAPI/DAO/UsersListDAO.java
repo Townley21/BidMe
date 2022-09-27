@@ -1,12 +1,12 @@
 package BidMeAPI.DAO;
 
-import java.sql.SQLException;
-
 import BidMeAPI.Model.User;
+
+import java.sql.SQLException;
 
 public interface UsersListDAO {
 
-	public User createuser(User user) throws SQLException;
+	public User createUser(User user) throws SQLException;
 	
 	public User getUser(String email) throws SQLException;
 	

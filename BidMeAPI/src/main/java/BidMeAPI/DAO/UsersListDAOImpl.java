@@ -1,13 +1,11 @@
 package BidMeAPI.DAO;
 
+import BidMeAPI.Model.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.mysql.cj.protocol.Resultset;
-
-import BidMeAPI.Model.User;
 
 public class UsersListDAOImpl implements UsersListDAO {
 
@@ -25,7 +23,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 	
 	
 	@Override
-	public User createuser(User user) throws SQLException {
+	public User createUser(User user) throws SQLException {
 		
 		int userID = user.getUserID();
 		String name = user.getName();
