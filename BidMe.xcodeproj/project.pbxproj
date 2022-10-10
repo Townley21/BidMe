@@ -16,6 +16,11 @@
 		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
 		5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */; };
 		5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */; };
+		5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */; };
+		5FD637D028F24D6100B12BA6 /* ListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD637CF28F24D6100B12BA6 /* ListingTableViewCell.xib */; };
+		5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */; };
+		5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */; };
+		5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingTableViewCell.swift; path = ../../../Desktop/SwiftApp/BidMe/BidMe/ListingTableViewCell.swift; sourceTree = "<group>"; };
+		5FD637CF28F24D6100B12BA6 /* ListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListingTableViewCell.xib; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/ListingTableViewCell.xib"; sourceTree = "<group>"; };
+		5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsViewController.swift; sourceTree = "<group>"; };
+		5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsCell.swift; sourceTree = "<group>"; };
+		5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingDetailsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +77,16 @@
 				5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */,
 				5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */,
 				5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */,
+				5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */,
 				5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */,
 				516AB89E28D1A35000263029 /* Main.storyboard */,
+				5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */,
+				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
 				516AB8A128D1A35100263029 /* Assets.xcassets */,
 				516AB8A328D1A35100263029 /* LaunchScreen.storyboard */,
 				516AB8A628D1A35100263029 /* Info.plist */,
+				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
+				5FD637CF28F24D6100B12BA6 /* ListingTableViewCell.xib */,
 			);
 			path = BidMe;
 			sourceTree = "<group>";
@@ -137,7 +152,9 @@
 			files = (
 				516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */,
 				516AB8A228D1A35100263029 /* Assets.xcassets in Resources */,
+				5FD637D028F24D6100B12BA6 /* ListingTableViewCell.xib in Resources */,
 				516AB8A028D1A35000263029 /* Main.storyboard in Resources */,
+				5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +169,9 @@
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
 				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,
 				5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */,
+				5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */,
+				5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */,
+				5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */,
 				516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */,
 				5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */,
 			);
@@ -300,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ83LRBKAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -331,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ83LRBKAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
