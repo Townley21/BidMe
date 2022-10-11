@@ -11,7 +11,7 @@ import UIKit
 class ListingTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

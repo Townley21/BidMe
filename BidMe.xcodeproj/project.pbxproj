@@ -40,7 +40,7 @@
 		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5FB31F3328F4C1FD000F92AA /* ListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingTableViewCell.xib; sourceTree = "<group>"; };
-		5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingTableViewCell.swift; path = ../../../Desktop/SwiftApp/BidMe/BidMe/ListingTableViewCell.swift; sourceTree = "<group>"; };
+		5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsViewController.swift; sourceTree = "<group>"; };
 		5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsCell.swift; sourceTree = "<group>"; };
 		5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingDetailsCell.xib; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HZ83LRBKAG;
+				DEVELOPMENT_TEAM = FC8J7PEZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
@@ -343,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam0001;
+				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
