@@ -62,7 +62,7 @@
                             <constraint firstItem="sBX-aq-dmx" firstAttribute="bottom" secondItem="0mD-ic-fVP" secondAttribute="bottom" id="sMn-So-n5E"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Your Listings" id="zmm-rW-oDx">
+                    <tabBarItem key="tabBarItem" title="Your Listings" image="doc.plaintext.fill" catalog="system" id="zmm-rW-oDx">
                         <color key="badgeColor" red="0.39975675939999999" green="0.70030790570000001" blue="0.97650569679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <connections>
@@ -169,7 +169,7 @@
                         <viewLayoutGuide key="safeArea" id="r0L-cT-N1O"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="vW6-KK-zLk"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="vW6-KK-zLk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlt-60-Orp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,7 +227,7 @@
                         <viewLayoutGuide key="safeArea" id="F4d-xL-4Js"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" id="y19-dx-MpG"/>
+                    <tabBarItem key="tabBarItem" title="History" image="text.book.closed.fill" catalog="system" id="y19-dx-MpG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ2-5T-LU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,7 +243,7 @@
                         <viewLayoutGuide key="safeArea" id="ZBf-7D-8kx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Bid" id="2ML-c2-xiW"/>
+                    <tabBarItem key="tabBarItem" title="Create Bid" image="plus" catalog="system" id="2ML-c2-xiW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0K-qW-VTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,6 +251,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
