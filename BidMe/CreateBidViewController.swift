@@ -8,13 +8,54 @@
 
 import UIKit
 
-class CreateBidViewController: UIViewController {
+class CreateBidViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
+    @IBOutlet var titleField: UITextField!
+    @IBOutlet var descriptionField: UITextView!
+    @IBOutlet var addressField: UITextField!
+    @IBOutlet var radiusField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-             
+       
+        configureTextFields()
+        configureTapGesture()
+        
     }
 
-
+    private func configureTextFields() {
+        titleField.delegate = self
+        descriptionField.delegate = self
+        addressField.delegate = self
+        radiusField.delegate = self
+    }
+    
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateBidViewController.handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        print("Handle tap was called")
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        
+        return true
+    }
+    
+    @IBAction func submitPressed(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
 }
