@@ -28,6 +28,8 @@ class CreateBidViewController: UIViewController, UITextFieldDelegate, UITextView
     private func configureTextFields() {
         titleField.delegate = self
         descriptionField.delegate = self
+        descriptionField.text = "Description"
+        descriptionField.textColor = .systemBlue
         addressField.delegate = self
         radiusField.delegate = self
     }
@@ -53,6 +55,22 @@ class CreateBidViewController: UIViewController, UITextFieldDelegate, UITextView
         
         return true
     }
+    
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .systemBlue {
+            textView.text = ""
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Description"
+            textView.textColor = .systemBlue
+        }
+    }
+    
     
     @IBAction func submitPressed(_ sender: Any) {
         view.endEditing(true)
