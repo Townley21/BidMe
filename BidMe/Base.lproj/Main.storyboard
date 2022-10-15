@@ -271,6 +271,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
                                     <action selector="submitPressed:" destination="rD6-mi-GbU" eventType="touchUpInside" id="nsC-Zh-kIu"/>
+                                    <segue destination="C8b-df-dVD" kind="show" identifier="Confirmation" id="6gh-up-bUh"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B19-Og-1Na">
@@ -354,6 +355,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0K-qW-VTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1890.8396946564885" y="-993.66197183098598"/>
+        </scene>
+        <!--CreateBidConfirmationScreen-->
+        <scene sceneID="gUt-KK-eEh">
+            <objects>
+                <viewController title="CreateBidConfirmationScreen" id="C8b-df-dVD" customClass="CreateBidConfirmationController" customModule="BidMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZw-7P-Rf5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Confirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Vo-rh-1o2">
+                                <rect key="frame" x="39.333333333333329" y="80" width="314.33333333333331" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99661844968795776" green="0.99661844968795776" blue="0.99661844968795776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W00-HR-8ON">
+                                <rect key="frame" x="154" y="633" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="C8b-df-dVD" eventType="touchUpInside" id="KWk-54-lRl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="grP-dN-nnD"/>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NRa-XT-pMV"/>
+                    <connections>
+                        <outlet property="confirmationButton" destination="W00-HR-8ON" id="Xbn-JL-uHS"/>
+                        <outlet property="confirmationField" destination="2Vo-rh-1o2" id="LOa-Q6-Z4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQi-Th-zQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2806.8702290076335" y="-994.36619718309862"/>
         </scene>
     </scenes>
     <resources>

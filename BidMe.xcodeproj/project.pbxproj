@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */; };
 		513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513525EC28EC14D9007DFFC7 /* MapViewController.swift */; };
 		515A89DC28EE975400116B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A89DB28EE975400116B35 /* ViewController.swift */; };
 		516AB89928D1A35000263029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89828D1A35000263029 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidConfirmationController.swift; sourceTree = "<group>"; };
 		513525EC28EC14D9007DFFC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		515A89DB28EE975400116B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		516AB89528D1A35000263029 /* BidMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */,
 				5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */,
 				516AB89E28D1A35000263029 /* Main.storyboard */,
+				5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */,
 				5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */,
 				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
 				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */,
 				5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */,
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
 				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,

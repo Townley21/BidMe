@@ -163,4 +163,15 @@ class CreateBidViewController: UIViewController, UITextFieldDelegate, UITextView
         view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Confirmation" {
+            let destinationController = segue.destination as! CreateBidConfirmationController
+            destinationController.confirmationText = "Post Preview (Scrollable): " + "\n\n"
+                                                    + "Title: " + titleField.text! + "\n\n"
+                                                    + "Description: " + descriptionField.text! + "\n\n"
+                                                    + "Address: " + addressField.text! + "\n\n"
+                                                    + "Radius (mi.): " + radiusField.text! + "\n\n"
+        }
+    }
+    
 }
