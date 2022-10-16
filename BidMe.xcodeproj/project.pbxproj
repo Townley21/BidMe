@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
 		513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513525EC28EC14D9007DFFC7 /* MapViewController.swift */; };
 		515A89DC28EE975400116B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A89DB28EE975400116B35 /* ViewController.swift */; };
 		516AB89928D1A35000263029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89828D1A35000263029 /* AppDelegate.swift */; };
 		516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89A28D1A35000263029 /* SceneDelegate.swift */; };
 		516AB8A028D1A35000263029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB89E28D1A35000263029 /* Main.storyboard */; };
-		516AB8A228D1A35100263029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
 		516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A328D1A35100263029 /* LaunchScreen.storyboard */; };
 		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
 		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
@@ -157,10 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */,
-				516AB8A228D1A35100263029 /* Assets.xcassets in Resources */,
 				516AB8A028D1A35000263029 /* Main.storyboard in Resources */,
 				5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */,
 				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
+				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
