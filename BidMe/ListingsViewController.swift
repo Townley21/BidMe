@@ -74,7 +74,6 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell",
                                                  for: indexPath) as! ListingTableViewCell
         
-        
         cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
         return cell
