@@ -60,7 +60,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "Invoice Seg" {
+        if segue.identifier == "InvoiceSeg" {
             let dest = segue.destination as! InvoiceViewController
             
             let invoiceNameData = [invoiceNameData0, invoiceNameData1]
