@@ -36,6 +36,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
              
     }
     
+    @IBAction func goToMap(_ sender: Any) {
+        performSegue(withIdentifier: "MapSeg", sender: self)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addressData.count
     }
@@ -54,15 +59,18 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! InvoiceViewController
         
-        let invoiceNameData = [invoiceNameData0, invoiceNameData1]
-        let invoicePriceData = [invoicePriceData0, invoicePriceData1]
-        
-        dest.nameData = invoiceNameData[index]
-        dest.priceData = invoicePriceData[index]
-        dest.titleOfJob = nameData[index]
-        dest.totalprice = priceData[index]
+        if segue.identifier == "Invoice Seg" {
+            let dest = segue.destination as! InvoiceViewController
+            
+            let invoiceNameData = [invoiceNameData0, invoiceNameData1]
+            let invoicePriceData = [invoicePriceData0, invoicePriceData1]
+            
+            dest.nameData = invoiceNameData[index]
+            dest.priceData = invoicePriceData[index]
+            dest.titleOfJob = nameData[index]
+            dest.totalprice = priceData[index]
+        }
     }
 
 
