@@ -261,8 +261,7 @@
                             <constraint firstItem="r0L-cT-N1O" firstAttribute="trailing" secondItem="Dki-rW-Krv" secondAttribute="trailing" constant="16" id="qSt-My-U7w"/>
                         </constraints>
                     </view>
-
-                    <tabBarItem key="tabBarItem" title="Profile" id="vW6-KK-zLk"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="vW6-KK-zLk"/>
                     <connections>
                         <outlet property="adress" destination="mdR-A8-emO" id="ECD-7L-L6s"/>
                         <outlet property="email" destination="Dki-rW-Krv" id="4tJ-e2-m99"/>
@@ -273,7 +272,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlt-60-Orp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1890.8396946564885" y="450.7042253521127"/>
-
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ENG-Cr-aUK">
@@ -606,13 +604,9 @@
         </scene>
     </scenes>
     <resources>
-
-        <image name="hammerBoi" width="341.33334350585938" height="341.33334350585938"/>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="hammerBoi" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
@@ -621,12 +615,8 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-
         </systemColor>
     </resources>
 </document>
