@@ -7,23 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
+		5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */; };
+		513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513525EC28EC14D9007DFFC7 /* MapViewController.swift */; };
+		515A89DC28EE975400116B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A89DB28EE975400116B35 /* ViewController.swift */; };
 		516AB89928D1A35000263029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89828D1A35000263029 /* AppDelegate.swift */; };
 		516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89A28D1A35000263029 /* SceneDelegate.swift */; };
-		516AB89D28D1A35000263029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89C28D1A35000263029 /* ViewController.swift */; };
 		516AB8A028D1A35000263029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB89E28D1A35000263029 /* Main.storyboard */; };
-		516AB8A228D1A35100263029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
 		516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A328D1A35100263029 /* LaunchScreen.storyboard */; };
+		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
+		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
+		5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */; };
+		5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */; };
+		5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB31F3328F4C1FD000F92AA /* ListingTableViewCell.xib */; };
+		5FC7414B28FC8AA900182778 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7414928FC8AA900182778 /* HistoryViewCell.swift */; };
+		5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC7414A28FC8AA900182778 /* HistoryViewCell.xib */; };
+		5FC7414E28FC942A00182778 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7414D28FC942A00182778 /* InvoiceViewController.swift */; };
+		5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */; };
+		5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */; };
+		5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */; };
+		5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidConfirmationController.swift; sourceTree = "<group>"; };
+		513525EC28EC14D9007DFFC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		515A89DB28EE975400116B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		516AB89528D1A35000263029 /* BidMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516AB89828D1A35000263029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516AB89A28D1A35000263029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		516AB89C28D1A35000263029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		516AB89F28D1A35000263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		516AB8A128D1A35100263029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516AB8A428D1A35100263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		516AB8A628D1A35100263029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidViewController.swift; sourceTree = "<group>"; };
+		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5FB31F3328F4C1FD000F92AA /* ListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingTableViewCell.xib; sourceTree = "<group>"; };
+		5FC7414928FC8AA900182778 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		5FC7414A28FC8AA900182778 /* HistoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewCell.xib; sourceTree = "<group>"; };
+		5FC7414D28FC942A00182778 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
+		5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
+		5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsViewController.swift; sourceTree = "<group>"; };
+		5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsCell.swift; sourceTree = "<group>"; };
+		5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingDetailsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +87,25 @@
 			children = (
 				516AB89828D1A35000263029 /* AppDelegate.swift */,
 				516AB89A28D1A35000263029 /* SceneDelegate.swift */,
-				516AB89C28D1A35000263029 /* ViewController.swift */,
+				5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */,
+				5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */,
+				5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */,
+				5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */,
+				5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */,
 				516AB89E28D1A35000263029 /* Main.storyboard */,
+				5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */,
+				5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */,
+				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
+				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
+				513525EC28EC14D9007DFFC7 /* MapViewController.swift */,
 				516AB8A128D1A35100263029 /* Assets.xcassets */,
 				516AB8A328D1A35100263029 /* LaunchScreen.storyboard */,
 				516AB8A628D1A35100263029 /* Info.plist */,
+				515A89DB28EE975400116B35 /* ViewController.swift */,
+				5FC7414D28FC942A00182778 /* InvoiceViewController.swift */,
+				5FB31F3328F4C1FD000F92AA /* ListingTableViewCell.xib */,
+				5FC7414928FC8AA900182778 /* HistoryViewCell.swift */,
+				5FC7414A28FC8AA900182778 /* HistoryViewCell.xib */,
 			);
 			path = BidMe;
 			sourceTree = "<group>";
@@ -127,8 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */,
-				516AB8A228D1A35100263029 /* Assets.xcassets in Resources */,
 				516AB8A028D1A35000263029 /* Main.storyboard in Resources */,
+				5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */,
+				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
+				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
+				5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +185,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516AB89D28D1A35000263029 /* ViewController.swift in Sources */,
+				5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */,
+				5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */,
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
+				5FC7414E28FC942A00182778 /* InvoiceViewController.swift in Sources */,
+				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,
+				5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */,
+				5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */,
+				5FC7414B28FC8AA900182778 /* HistoryViewCell.swift in Sources */,
+				5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */,
+				5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */,
 				516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */,
+				5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */,
+				515A89DC28EE975400116B35 /* ViewController.swift in Sources */,
+				513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,20 +345,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ83LRBKAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BidMeTeam.BidMe;
+				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam1212;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -319,20 +378,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ83LRBKAG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BidMeTeam.BidMe;
+				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam0001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
