@@ -12,6 +12,9 @@ class ListingTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var bidCountLabel: UILabel!
+    @IBOutlet var previewImage: UIImage!
     
     override func awakeFromNib() {
         super.awakeFromNib()

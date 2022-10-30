@@ -35,7 +35,7 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
     var bidNameData4 = ["Tonys Painting"]
     var bidPriceData4 = ["500.00"]
     
-    
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +43,11 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
         //Get nib (ListingTableViewCell.nib) and register it to this table
         let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Navbar
+        title = "Your Active Listings"
         
     }
     
@@ -76,6 +78,8 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
+        cell.descriptionLabel?.text = lorem
+        cell.bidCountLabel?.text = "7"
         return cell
     }
 }
