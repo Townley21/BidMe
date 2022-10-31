@@ -95,6 +95,7 @@
             <connections>
                 <outlet property="addressLabel" destination="MMq-fP-Kn3" id="F5j-4y-M05"/>
                 <outlet property="bidCountLabel" destination="Zqn-OK-c4T" id="sIB-ag-UZu"/>
+                <outlet property="bidStaticLabel" destination="9pL-eQ-58U" id="DLE-4k-APd"/>
                 <outlet property="descriptionLabel" destination="AuR-Kp-RIs" id="2Rb-On-SKJ"/>
                 <outlet property="nameLabel" destination="tdq-nj-Dgl" id="O8u-b2-hfb"/>
             </connections>

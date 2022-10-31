@@ -78,8 +78,8 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
-        cell.descriptionLabel?.text = lorem
         cell.bidCountLabel?.text = "7"
+        cell.descriptionLabel?.text = lorem
         return cell
     }
 }
