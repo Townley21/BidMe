@@ -15,6 +15,7 @@ class ListingTableViewCell: UITableViewCell {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var bidCountLabel: UILabel!
     @IBOutlet var previewImage: UIImage!
+    @IBOutlet var bidStaticLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
