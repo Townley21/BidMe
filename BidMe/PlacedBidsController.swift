@@ -1,14 +1,14 @@
 //
-//  AvailListingsViewController.swift
+//  PlacedBidsController.swift
 //  BidMe
 //
-//  Created by Axel Mora on 11/1/22.
+//  Created by Axel Mora on 11/2/22.
 //  Copyright © 2022 BidMeTeam. All rights reserved.
 //
 
 import UIKit
 
-class AvailListingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PlacedBidsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
     
@@ -47,9 +47,10 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
         tableView.dataSource = self
         
         //Navbar
-        title = "Available Listings"
+        title = "Bids Placed"
         
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.index = indexPath.row
@@ -70,6 +71,7 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
         return nameData.count
     }
     
+    
     //return cell to table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Define custom cell
@@ -82,4 +84,5 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.descriptionLabel?.text = lorem
         return cell
     }
+    
 }
