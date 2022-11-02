@@ -811,15 +811,6 @@
                                     <action selector="passwordChanged:" destination="knP-og-biz" eventType="editingChanged" id="yaJ-Az-83A"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHE-Go-lQS">
-                                <rect key="frame" x="253" y="502" width="124" height="10"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Screen Shot 2022-10-24 at 6.43.3"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="knP-og-biz" eventType="touchUpInside" id="Zrh-0L-MFY"/>
-                                    <segue destination="OXi-gS-tH7" kind="presentation" modalPresentationStyle="fullScreen" id="Pbz-sj-Ynn"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-9A-l7A">
                                 <rect key="frame" x="40" y="326" width="313" height="21"/>
                                 <constraints>
@@ -854,12 +845,22 @@
                                     <segue destination="vrh-0v-lCn" kind="presentation" modalPresentationStyle="fullScreen" id="DbX-kL-mWe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-gi-6dE">
+                                <rect key="frame" x="261" y="488" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="knP-og-biz" eventType="touchUpInside" id="FrT-H0-SAm"/>
+                                    <segue destination="OXi-gS-tH7" kind="presentation" modalPresentationStyle="fullScreen" id="K67-Ql-LDS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRZ-DF-sqV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="XnO-9A-l7A" secondAttribute="trailing" constant="40" id="3tg-mF-gCR"/>
-                            <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="MHE-Go-lQS" secondAttribute="trailing" constant="16" id="7Cf-KV-9wP"/>
                             <constraint firstItem="XnO-9A-l7A" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="40" id="9em-7s-1J0"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="koo-Th-Deh" secondAttribute="trailing" constant="235" id="AWe-V8-OQN"/>
                             <constraint firstItem="2U0-7p-RDg" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="76" id="AeX-ed-zlb"/>
@@ -867,10 +868,7 @@
                             <constraint firstItem="koo-Th-Deh" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="40" id="FPZ-Se-pFw"/>
                             <constraint firstItem="qZ4-mN-6PC" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="40" id="NZn-dz-zr3"/>
                             <constraint firstAttribute="bottom" secondItem="cbP-0o-O2J" secondAttribute="bottom" constant="27" id="PMg-4u-K8N"/>
-                            <constraint firstItem="MHE-Go-lQS" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="253" id="PvJ-9F-yVo"/>
-                            <constraint firstItem="cbP-0o-O2J" firstAttribute="top" secondItem="MHE-Go-lQS" secondAttribute="bottom" constant="278" id="SHz-Vy-bz3"/>
                             <constraint firstItem="2c7-QG-Ucn" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="40" id="Tru-zR-I5Z"/>
-                            <constraint firstItem="MHE-Go-lQS" firstAttribute="top" secondItem="qZ4-mN-6PC" secondAttribute="bottom" constant="78" id="UhZ-kD-Af8"/>
                             <constraint firstItem="qZ4-mN-6PC" firstAttribute="top" secondItem="pex-aq-FbI" secondAttribute="bottom" constant="7" id="VTU-dE-sPO"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="qZ4-mN-6PC" secondAttribute="trailing" constant="40" id="W29-Do-kAB"/>
                             <constraint firstItem="qZ4-mN-6PC" firstAttribute="top" secondItem="pex-aq-FbI" secondAttribute="bottom" constant="7" id="YQ3-um-2G9"/>
@@ -881,7 +879,6 @@
                             <constraint firstItem="cbP-0o-O2J" firstAttribute="leading" secondItem="hRZ-DF-sqV" secondAttribute="leading" constant="250" id="gzI-l9-JlD"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="vsJ-Cf-NIQ" secondAttribute="trailing" constant="40" id="hQn-S0-nXt"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="qZ4-mN-6PC" secondAttribute="trailing" constant="40" id="jCH-PI-fUV"/>
-                            <constraint firstItem="hRZ-DF-sqV" firstAttribute="bottom" secondItem="MHE-Go-lQS" secondAttribute="bottom" constant="306" id="jne-4y-Xn1"/>
                             <constraint firstItem="XnO-9A-l7A" firstAttribute="top" secondItem="vsJ-Cf-NIQ" secondAttribute="bottom" constant="8" symbolic="YES" id="lez-Vm-Lj7"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="bottom" secondItem="pex-aq-FbI" secondAttribute="bottom" constant="422" id="oae-uw-0xv"/>
                             <constraint firstItem="hRZ-DF-sqV" firstAttribute="trailing" secondItem="pex-aq-FbI" secondAttribute="trailing" constant="40" id="q3v-cx-ZXN"/>
@@ -898,7 +895,7 @@
                     <connections>
                         <outlet property="emailError" destination="XnO-9A-l7A" id="0bx-7A-ekp"/>
                         <outlet property="emailTF" destination="vsJ-Cf-NIQ" id="fhh-x0-juW"/>
-                        <outlet property="loginButton" destination="MHE-Go-lQS" id="koA-mC-wCF"/>
+                        <outlet property="loginButton" destination="eSm-gi-6dE" id="VDj-R4-gND"/>
                         <outlet property="passwordError" destination="qZ4-mN-6PC" id="Ff0-l9-gtI"/>
                         <outlet property="passwordTF" destination="pex-aq-FbI" id="5ME-BB-ZVn"/>
                     </connections>
@@ -912,7 +909,6 @@
         <segue reference="9TW-Jh-NDm"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Screen Shot 2022-10-24 at 6.43.3" width="100" height="36"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
         <image name="hammerBoi" width="341.33334350585938" height="341.33334350585938"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BB0432907719100661C2B /* LoginViewController.swift */; };
 		0B48D0E8290F28FA0044CEA0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */; };
-		0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
+		0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B48D0E929130BC00044CEA0 /* Assets.xcassets */; };
 		5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */; };
 		513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513525EC28EC14D9007DFFC7 /* MapViewController.swift */; };
 		515A89DC28EE975400116B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A89DB28EE975400116B35 /* ViewController.swift */; };
@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0B3BB0432907719100661C2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0B48D0E929130BC00044CEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidConfirmationController.swift; sourceTree = "<group>"; };
 		513525EC28EC14D9007DFFC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		515A89DB28EE975400116B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		516AB89828D1A35000263029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516AB89A28D1A35000263029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		516AB89F28D1A35000263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		516AB8A128D1A35100263029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516AB8A428D1A35100263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		516AB8A628D1A35100263029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
 				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
 				513525EC28EC14D9007DFFC7 /* MapViewController.swift */,
-				516AB8A128D1A35100263029 /* Assets.xcassets */,
 				516AB8A328D1A35100263029 /* LaunchScreen.storyboard */,
+				0B48D0E929130BC00044CEA0 /* Assets.xcassets */,
 				516AB8A628D1A35100263029 /* Info.plist */,
 				515A89DB28EE975400116B35 /* ViewController.swift */,
 				5FC7414D28FC942A00182778 /* InvoiceViewController.swift */,
@@ -178,7 +178,7 @@
 				516AB8A028D1A35000263029 /* Main.storyboard in Resources */,
 				5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */,
 				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
-				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
+				0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */,
 				5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
