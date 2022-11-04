@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="grG-It-Gbp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="grG-It-Gbp">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -570,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQi-Th-zQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806.8702290076335" y="-994.36619718309862"/>
+            <point key="canvasLocation" x="2818" y="-994"/>
         </scene>
         <!--Your Listings-->
         <scene sceneID="vd5-84-HH7">
@@ -1046,7 +1046,7 @@
                                 <rect key="frame" x="232" y="704" width="95" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Place BId"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Place Bid"/>
                                 <connections>
                                     <action selector="placeBidButtonPressed:" destination="Bje-MB-Duh" eventType="touchUpInside" id="ajt-Jc-MOn"/>
                                 </connections>
@@ -1056,6 +1056,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Inquire"/>
+                                <connections>
+                                    <segue destination="AkL-HB-yUL" kind="show" identifier="inquireSeg" id="Eqk-Nh-Xe2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AIf-Gm-KrM"/>
@@ -1127,6 +1130,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJX-Od-5Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2695" y="-2418"/>
+        </scene>
+        <!--Inquire-->
+        <scene sceneID="tsA-3D-QVs">
+            <objects>
+                <viewController title="Inquire" id="AkL-HB-yUL" customClass="InquireViewController" customModule="BidMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbn-Ok-H9o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Confirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rI6-wQ-FiS">
+                                <rect key="frame" x="39" y="115" width="314.33333333333331" height="231"/>
+                                <color key="backgroundColor" red="0.99661844970000002" green="0.99661844970000002" blue="0.99661844970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="slM-JK-AGJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="slM-JK-AGJ" firstAttribute="bottom" secondItem="rI6-wQ-FiS" secondAttribute="bottom" constant="423" id="Xf1-P0-kMF"/>
+                            <constraint firstItem="slM-JK-AGJ" firstAttribute="trailing" secondItem="rI6-wQ-FiS" secondAttribute="trailing" constant="39.670000000000002" id="aGQ-B4-P3A"/>
+                            <constraint firstItem="rI6-wQ-FiS" firstAttribute="leading" secondItem="slM-JK-AGJ" secondAttribute="leading" constant="39" id="fZV-Vf-3dN"/>
+                            <constraint firstItem="rI6-wQ-FiS" firstAttribute="top" secondItem="slM-JK-AGJ" secondAttribute="top" constant="12" id="tfA-0d-Hub"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NE0-gZ-cGB"/>
+                    <connections>
+                        <outlet property="confirmationField" destination="rI6-wQ-FiS" id="bFs-Wp-L7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZp-3L-a8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4330.5343511450383" y="-4530.2816901408451"/>
         </scene>
     </scenes>
     <resources>

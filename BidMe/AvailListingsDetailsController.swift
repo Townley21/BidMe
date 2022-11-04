@@ -119,6 +119,15 @@ class AvailListingDetailsViewController: UIViewController, UITableViewDelegate, 
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "inquireSeg" {
+            let destinationController = segue.destination as! InquireViewController
+            destinationController.confirmationText = "Name: Henry Goat \n\n"
+                                                    + "Phone: (123) 456-7891 \n\n"
+                                                    + "Address: 123 Fake Street \n\n"
+                                                    + "E-Mail: Henry.goat@gmail.com \n\n"
+        }
+    }
 
 }
 

@@ -18,9 +18,12 @@
 		516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89A28D1A35000263029 /* SceneDelegate.swift */; };
 		516AB8A028D1A35000263029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB89E28D1A35000263029 /* Main.storyboard */; };
 		516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A328D1A35100263029 /* LaunchScreen.storyboard */; };
+		51A17156291316D700176D8B /* BidsPlacedListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A17155291316D700176D8B /* BidsPlacedListCell.xib */; };
+		51A17158291316EF00176D8B /* BidsPlacedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17157291316EF00176D8B /* BidsPlacedListCell.swift */; };
 		51E6FE9C2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */; };
 		51E6FE9D2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */; };
 		51E6FEA129126E55001BEFCF /* PlacedBidsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */; };
+		51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CE92914E074006B6BA6 /* InquireViewController.swift */; };
 		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
 		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
 		5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */; };
@@ -49,9 +52,12 @@
 		516AB8A128D1A35100263029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516AB8A428D1A35100263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		516AB8A628D1A35100263029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51A17155291316D700176D8B /* BidsPlacedListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BidsPlacedListCell.xib; sourceTree = "<group>"; };
+		51A17157291316EF00176D8B /* BidsPlacedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsPlacedListCell.swift; sourceTree = "<group>"; };
 		51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacedBidsController.swift; sourceTree = "<group>"; };
+		51E83CE92914E074006B6BA6 /* InquireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquireViewController.swift; sourceTree = "<group>"; };
 		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */,
 				5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */,
 				516AB89E28D1A35000263029 /* Main.storyboard */,
+				51E83CE92914E074006B6BA6 /* InquireViewController.swift */,
 				512CC3512911DD320004ED95 /* AvailListingsDetailsController.swift */,
 				51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */,
 				51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */,
@@ -114,6 +121,8 @@
 				5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */,
 				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
 				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
+				51A17155291316D700176D8B /* BidsPlacedListCell.xib */,
+				51A17157291316EF00176D8B /* BidsPlacedListCell.swift */,
 				513525EC28EC14D9007DFFC7 /* MapViewController.swift */,
 				516AB8A128D1A35100263029 /* Assets.xcassets */,
 				516AB8A328D1A35100263029 /* LaunchScreen.storyboard */,
@@ -192,6 +201,7 @@
 				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
 				51E6FE9D2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib in Resources */,
 				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
+				51A17156291316D700176D8B /* BidsPlacedListCell.xib in Resources */,
 				5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,11 +218,13 @@
 				51E6FEA129126E55001BEFCF /* PlacedBidsController.swift in Sources */,
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
 				512CC3522911DD320004ED95 /* AvailListingsDetailsController.swift in Sources */,
+				51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */,
 				5FC7414E28FC942A00182778 /* InvoiceViewController.swift in Sources */,
 				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,
 				5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */,
 				5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */,
 				5FC7414B28FC8AA900182778 /* HistoryViewCell.swift in Sources */,
+				51A17158291316EF00176D8B /* BidsPlacedListCell.swift in Sources */,
 				5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */,
 				5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */,
 				516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */,

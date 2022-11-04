@@ -41,8 +41,8 @@ class PlacedBidsController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         //Get nib (ListingTableViewCell.nib) and register it to this table
-        let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
+        let nib = UINib(nibName: "BidsPlacedListCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "BidsPlacedListCell")
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -51,11 +51,13 @@ class PlacedBidsController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.index = indexPath.row
         performSegue(withIdentifier: "seg2", sender: self)
     }
+     */
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! AvailListingDetailsViewController
         //let ListingsNameData = [bidNameData0, bidNameData1, bidNameData2, bidNameData3, bidNameData4]
@@ -75,12 +77,12 @@ class PlacedBidsController: UIViewController, UITableViewDelegate, UITableViewDa
     //return cell to table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Define custom cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell",
-                                                 for: indexPath) as! ListingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BidsPlacedListCell",
+                                                 for: indexPath) as! BidsPlacedListCell
         
         cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
-        cell.bidCountLabel?.text = "7"
+        //cell.bidCountLabel?.text = "$363.54"
         cell.descriptionLabel?.text = lorem
         return cell
     }
