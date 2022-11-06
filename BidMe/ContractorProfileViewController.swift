@@ -1,19 +1,25 @@
 //
-//  ViewController.swift
+//  ContractorProfileViewController.swift
 //  BidMe
 //
-//  Created by Axel Mora on 9/13/22.
+//  Created by Axel Mora on 11/1/22.
+//  Copyright © 2022 BidMeTeam. All rights reserved.
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContractorProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     @IBOutlet var username: UILabel!
     @IBOutlet var fullName: UILabel!
     @IBOutlet var email: UILabel!
     @IBOutlet var image: UIImageView!
-    @IBOutlet var tableView: UITableView!
+    //@IBOutlet var tableView: UITableView!
+    @IBOutlet var mapView: MKMapView!
+    
+    let manager = CLLocationManager();
     
     var nameData = ["Tree Trimming", "Carpet Installation"]
     var addressData = ["One University Dr, Camarillo, CA 93012", "One University Dr, Camarillo, CA 93012"]
@@ -44,12 +50,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         image.layer.cornerRadius = image.frame.height / 2
         image.clipsToBounds = true
         
+        /*
         //History Table setup
         let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
+        */
+         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,6 +94,39 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             dest.totalprice = priceData[index]
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        manager.desiredAccuracy = kCLLocationAccuracyBest;
+        manager.delegate = self;
+        manager.requestWhenInUseAuthorization();
+        manager.startUpdatingLocation();
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first{
+            manager.stopUpdatingLocation();
+            render(location);
+        }
+    }
+    
+    func render(_ location : CLLocation) {
+        
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude);
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
+        
+        let region = MKCoordinateRegion(center: coordinate, span: span);
+        
+        mapView.setRegion(region, animated: true);
+        
+        let pin = MKPointAnnotation();
+        pin.coordinate = coordinate;
+        mapView.addAnnotation(pin);
+    }
+
 
 
 }
