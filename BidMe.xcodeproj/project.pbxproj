@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BB0432907719100661C2B /* LoginViewController.swift */; };
+		0B48D0E8290F28FA0044CEA0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */; };
+		0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B48D0E929130BC00044CEA0 /* Assets.xcassets */; };
 		0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
+		512CC3502911DBF00004ED95 /* AvailListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC34F2911DBF00004ED95 /* AvailListingsViewController.swift */; };
+		512CC3522911DD320004ED95 /* AvailListingsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC3512911DD320004ED95 /* AvailListingsDetailsController.swift */; };
+		512CC3542911DF7F0004ED95 /* ContractorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC3532911DF7F0004ED95 /* ContractorProfileViewController.swift */; };
 		5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */; };
 		513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513525EC28EC14D9007DFFC7 /* MapViewController.swift */; };
 		515A89DC28EE975400116B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A89DB28EE975400116B35 /* ViewController.swift */; };
@@ -15,6 +22,14 @@
 		516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516AB89A28D1A35000263029 /* SceneDelegate.swift */; };
 		516AB8A028D1A35000263029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB89E28D1A35000263029 /* Main.storyboard */; };
 		516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A328D1A35100263029 /* LaunchScreen.storyboard */; };
+		51A17156291316D700176D8B /* BidsPlacedListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A17155291316D700176D8B /* BidsPlacedListCell.xib */; };
+		51A17158291316EF00176D8B /* BidsPlacedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17157291316EF00176D8B /* BidsPlacedListCell.swift */; };
+		51E6FE9C2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */; };
+		51E6FE9D2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */; };
+		51E6FEA129126E55001BEFCF /* PlacedBidsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */; };
+		51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CE92914E074006B6BA6 /* InquireViewController.swift */; };
+		51E83CEC2914ECD3006B6BA6 /* ActiveJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */; };
+		51E83CEE2914EF20006B6BA6 /* ContractorInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */; };
 		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
 		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
 		5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */; };
@@ -27,9 +42,20 @@
 		5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */; };
 		5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */; };
 		5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */; };
+		F82CEE75291452E600641921 /* EditInvoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82CEE74291452E600641921 /* EditInvoiceCell.swift */; };
+		F8C5B13D2912EDF40027A61D /* ContractorInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B13B2912EDF40027A61D /* ContractorInvoiceViewController.swift */; };
+		F8C5B13E2912EDF40027A61D /* EditInvoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C5B13C2912EDF40027A61D /* EditInvoiceCell.xib */; };
+		F8C5B14029130CFF0027A61D /* EditInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B13F29130CFF0027A61D /* EditInvoiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		0B3BB0432907719100661C2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0B48D0E929130BC00044CEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		512CC34F2911DBF00004ED95 /* AvailListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailListingsViewController.swift; sourceTree = "<group>"; };
+		512CC3512911DD320004ED95 /* AvailListingsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailListingsDetailsController.swift; sourceTree = "<group>"; };
+		512CC3532911DF7F0004ED95 /* ContractorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorProfileViewController.swift; sourceTree = "<group>"; };
 		5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidConfirmationController.swift; sourceTree = "<group>"; };
 		513525EC28EC14D9007DFFC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		515A89DB28EE975400116B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +63,16 @@
 		516AB89828D1A35000263029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516AB89A28D1A35000263029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		516AB89F28D1A35000263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		516AB8A128D1A35100263029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516AB8A428D1A35100263029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		516AB8A628D1A35100263029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51A17155291316D700176D8B /* BidsPlacedListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BidsPlacedListCell.xib; sourceTree = "<group>"; };
+		51A17157291316EF00176D8B /* BidsPlacedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsPlacedListCell.swift; sourceTree = "<group>"; };
+		51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacedBidsController.swift; sourceTree = "<group>"; };
+		51E83CE92914E074006B6BA6 /* InquireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquireViewController.swift; sourceTree = "<group>"; };
+		51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobsViewController.swift; sourceTree = "<group>"; };
+		51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInvoiceViewController.swift; sourceTree = "<group>"; };
 		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +85,10 @@
 		5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsViewController.swift; sourceTree = "<group>"; };
 		5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailsCell.swift; sourceTree = "<group>"; };
 		5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingDetailsCell.xib; sourceTree = "<group>"; };
+		F82CEE74291452E600641921 /* EditInvoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInvoiceCell.swift; sourceTree = "<group>"; };
+		F8C5B13B2912EDF40027A61D /* ContractorInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInvoiceViewController.swift; sourceTree = "<group>"; };
+		F8C5B13C2912EDF40027A61D /* EditInvoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditInvoiceCell.xib; sourceTree = "<group>"; };
+		F8C5B13F29130CFF0027A61D /* EditInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInvoiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,21 +124,39 @@
 				516AB89828D1A35000263029 /* AppDelegate.swift */,
 				516AB89A28D1A35000263029 /* SceneDelegate.swift */,
 				5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */,
+				512CC3532911DF7F0004ED95 /* ContractorProfileViewController.swift */,
 				5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */,
 				5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */,
+				512CC34F2911DBF00004ED95 /* AvailListingsViewController.swift */,
+				51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */,
 				5FD637D128F25D5400B12BA6 /* ListingDetailsViewController.swift */,
 				5F8FB9E428EA2DDD008221CB /* HistoryViewController.swift */,
+				5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */,
+				0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */,
+				0B3BB0432907719100661C2B /* LoginViewController.swift */,
 				516AB89E28D1A35000263029 /* Main.storyboard */,
+				51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */,
+				51E83CE92914E074006B6BA6 /* InquireViewController.swift */,
+				512CC3512911DD320004ED95 /* AvailListingsDetailsController.swift */,
+				51E6FE9A2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift */,
+				51E6FE9B2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib */,
 				5130FA6D28FA840F00E5D18B /* CreateBidConfirmationController.swift */,
 				5FD637D928F384FF00B12BA6 /* ListingDetailsCell.swift */,
 				5FD637DA28F384FF00B12BA6 /* ListingDetailsCell.xib */,
 				5FD637CB28F1317700B12BA6 /* ListingTableViewCell.swift */,
+				51A17155291316D700176D8B /* BidsPlacedListCell.xib */,
+				51A17157291316EF00176D8B /* BidsPlacedListCell.swift */,
+				51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */,
 				513525EC28EC14D9007DFFC7 /* MapViewController.swift */,
-				516AB8A128D1A35100263029 /* Assets.xcassets */,
 				516AB8A328D1A35100263029 /* LaunchScreen.storyboard */,
+				0B48D0E929130BC00044CEA0 /* Assets.xcassets */,
 				516AB8A628D1A35100263029 /* Info.plist */,
 				515A89DB28EE975400116B35 /* ViewController.swift */,
 				5FC7414D28FC942A00182778 /* InvoiceViewController.swift */,
+				F8C5B13B2912EDF40027A61D /* ContractorInvoiceViewController.swift */,
+				F82CEE74291452E600641921 /* EditInvoiceCell.swift */,
+				F8C5B13C2912EDF40027A61D /* EditInvoiceCell.xib */,
+				F8C5B13F29130CFF0027A61D /* EditInvoiceViewController.swift */,
 				5FB31F3328F4C1FD000F92AA /* ListingTableViewCell.xib */,
 				5FC7414928FC8AA900182778 /* HistoryViewCell.swift */,
 				5FC7414A28FC8AA900182778 /* HistoryViewCell.xib */,
@@ -171,8 +226,12 @@
 				516AB8A528D1A35100263029 /* LaunchScreen.storyboard in Resources */,
 				516AB8A028D1A35000263029 /* Main.storyboard in Resources */,
 				5FD637DC28F384FF00B12BA6 /* ListingDetailsCell.xib in Resources */,
+				F8C5B13E2912EDF40027A61D /* EditInvoiceCell.xib in Resources */,
 				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
+				0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */,
+				51E6FE9D2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib in Resources */,
 				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
+				51A17156291316D700176D8B /* BidsPlacedListCell.xib in Resources */,
 				5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,17 +243,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82CEE75291452E600641921 /* EditInvoiceCell.swift in Sources */,
 				5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */,
 				5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */,
+				51E6FEA129126E55001BEFCF /* PlacedBidsController.swift in Sources */,
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
+				0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */,
+				512CC3522911DD320004ED95 /* AvailListingsDetailsController.swift in Sources */,
+				51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */,
 				5FC7414E28FC942A00182778 /* InvoiceViewController.swift in Sources */,
+				F8C5B13D2912EDF40027A61D /* ContractorInvoiceViewController.swift in Sources */,
 				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,
 				5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */,
 				5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */,
 				5FC7414B28FC8AA900182778 /* HistoryViewCell.swift in Sources */,
+				51A17158291316EF00176D8B /* BidsPlacedListCell.swift in Sources */,
 				5FD637DB28F384FF00B12BA6 /* ListingDetailsCell.swift in Sources */,
+				0B48D0E8290F28FA0044CEA0 /* SignupViewController.swift in Sources */,
+				51E83CEE2914EF20006B6BA6 /* ContractorInvoiceViewController.swift in Sources */,
 				5FD637CD28F1317700B12BA6 /* ListingTableViewCell.swift in Sources */,
+				51E83CEC2914ECD3006B6BA6 /* ActiveJobsViewController.swift in Sources */,
 				516AB89B28D1A35000263029 /* SceneDelegate.swift in Sources */,
+				F8C5B14029130CFF0027A61D /* EditInvoiceViewController.swift in Sources */,
+				51E6FE9C2912426B001BEFCF /* ListingPhotoCollectionViewCell.swift in Sources */,
+				512CC3502911DBF00004ED95 /* AvailListingsViewController.swift in Sources */,
+				512CC3542911DF7F0004ED95 /* ContractorProfileViewController.swift in Sources */,
 				5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */,
 				515A89DC28EE975400116B35 /* ViewController.swift in Sources */,
 				513525ED28EC14D9007DFFC7 /* MapViewController.swift in Sources */,
@@ -344,7 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HZ83LRBKAG;
+				DEVELOPMENT_TEAM = FC8J7PEZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BidMe/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
@@ -359,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam12121;
+				PRODUCT_BUNDLE_IDENTIFIER = BidMeTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
