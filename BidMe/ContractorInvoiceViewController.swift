@@ -2,15 +2,18 @@
 //  ContractorInvoiceViewController.swift
 //  BidMe
 //
+
 //  Created by Jerin Sharif on 11/2/22.
 //  Copyright © 2022 BidMeTeam. All rights reserved.
 //
+
 
 
 import UIKit
 
 class ContractorInvoiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -27,12 +30,14 @@ class ContractorInvoiceViewController: UIViewController, UITableViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         let nib = UINib(nibName: "ListingDetailsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListingDetailsCell")
         tableView.delegate = self
         tableView.dataSource = self
         
         descriptionLabel.text = lorem
+
         titleLabel.text = titleOfJob
         totalPriceLabel.text = totalprice
         title = "Invoice"
@@ -46,6 +51,7 @@ class ContractorInvoiceViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameData.count
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingDetailsCell", for: indexPath) as! ListingDetailsCell
@@ -54,6 +60,7 @@ class ContractorInvoiceViewController: UIViewController, UITableViewDelegate, UI
         cell.priceLabel?.text = priceData[indexPath.row]
         return cell
     }
+
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
