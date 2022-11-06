@@ -35,8 +35,9 @@ class CreateBidConfirmationController: UIViewController {
                 action in print("Tapped Cancel Button.")
         })  )
         
+        //handle processing of adding bid to db
         alert.addAction(UIAlertAction(title: "Yes, Post This!", style: .default, handler: {
-                action in print("Tapped Yes Button.")
+                _ in print("Approved")
         })  )
 
         

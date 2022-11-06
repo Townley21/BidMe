@@ -65,9 +65,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell", for: indexPath) as! ListingTableViewCell
         
         cell.addressLabel?.text = addressData[indexPath.row]
-        cell.bidCountLabel?.text = priceData[indexPath.row]
+        cell.bidCountLabel?.text = ""
         cell.nameLabel?.text = nameData[indexPath.row]
-        cell.bidStaticLabel?.text = ""
+        cell.bidStaticLabel?.text = "$" + priceData[indexPath.row]
         cell.descriptionLabel?.text = lorem
         return cell
     }
