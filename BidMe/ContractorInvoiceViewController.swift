@@ -38,8 +38,8 @@ class ContractorInvoiceViewController: UIViewController, UITableViewDelegate, UI
         
         descriptionLabel.text = lorem
 
-        titleLabel.text = titleOfJob
-        totalPriceLabel.text = totalprice
+        titleLabel?.text = titleOfJob
+        totalPriceLabel?.text = totalprice
         title = "Invoice"
         // Do any additional setup after loading the view.
     }

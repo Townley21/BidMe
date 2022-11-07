@@ -20,20 +20,10 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
     
-    @IBOutlet weak var btnRec: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
     
     //Functions
-    
-    @IBAction func btnRec(_ sender: Any) {
-        bRec = !bRec
-        if bRec {
-            btnRec.setImage(UIImage(named: "checked.png"), for: .normal)
-        } else {
-            btnRec.setImage(UIImage(named: "unchecked.png"), for: .normal)
-        }
-    }
     
     
     override func viewDidLoad() {

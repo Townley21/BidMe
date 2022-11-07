@@ -61,7 +61,7 @@ class ActiveJobsViewController: UIViewController, UITableViewDelegate, UITableVi
         let ListingsNameData = [bidNameData0, bidNameData1, bidNameData2, bidNameData3, bidNameData4]
         let ListingsPriceData = [bidPriceData0, bidPriceData1, bidPriceData2, bidPriceData3, bidPriceData4]
         
-        dest.jobTitle = nameData[index]
+        dest.titleOfJob = nameData[index]
         dest.nameData = ListingsNameData[index]
         dest.priceData = ListingsPriceData[index]
     }
