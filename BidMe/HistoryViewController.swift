@@ -23,21 +23,20 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var invoiceNameData1 = ["Labor", "Materials"]
     var invoicePriceData1 = ["1500.00", "800.00"]
+    
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "History"
+        title = "Active Contracts"
         
-        let nib = UINib(nibName: "HistoryViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "HistoryViewCell")
+        let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
 
              
-    }
-    
-    @IBAction func goToMap(_ sender: Any) {
-        performSegue(withIdentifier: "MapSeg", sender: self)
     }
     
     
@@ -46,22 +45,25 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryViewCell", for: indexPath) as! HistoryViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell", for: indexPath) as! ListingTableViewCell
         
+        cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
-        cell.priceLabel?.text = priceData[indexPath.row]
+        cell.bidStaticLabel?.text = priceData[indexPath.row]
+        cell.bidCountLabel?.text = " "
+        cell.descriptionLabel?.text = lorem
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.index = indexPath.row
-        performSegue(withIdentifier: "InvoiceSeg", sender: self)
+        performSegue(withIdentifier: "ContractorInvoiceSeg", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "InvoiceSeg" {
-            let dest = segue.destination as! InvoiceViewController
+        if segue.identifier == "ContractorInvoiceSeg" {
+            let dest = segue.destination as! ContractorInvoiceViewController
             
             let invoiceNameData = [invoiceNameData0, invoiceNameData1]
             let invoicePriceData = [invoicePriceData0, invoicePriceData1]
