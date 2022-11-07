@@ -23,7 +23,7 @@
                     <connections>
                         <segue destination="tUP-ZH-fzm" kind="relationship" relationship="viewControllers" id="5of-Vu-J0q"/>
                         <segue destination="q3V-d3-4qw" kind="relationship" relationship="viewControllers" id="iF5-JL-lfu"/>
-                        <segue destination="rD6-mi-GbU" kind="relationship" relationship="viewControllers" id="7Mv-2g-vl2"/>
+                        <segue destination="xZG-yt-VWa" kind="relationship" relationship="viewControllers" id="7Mv-2g-vl2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5H-Dm-lMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,7 +425,7 @@
             </objects>
             <point key="canvasLocation" x="-750" y="-3673"/>
         </scene>
-        <!--Create Bid-->
+        <!--Create Bid View Controller-->
         <scene sceneID="CZV-1L-HhC">
             <objects>
                 <viewController id="rD6-mi-GbU" customClass="CreateBidViewController" customModule="BidMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -463,7 +463,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
                                     <action selector="submitPressed:" destination="rD6-mi-GbU" eventType="touchUpInside" id="nsC-Zh-kIu"/>
-                                    <segue destination="C8b-df-dVD" kind="show" identifier="Confirmation" id="6gh-up-bUh"/>
+                                    <segue destination="C8b-df-dVD" kind="show" identifier="Confirmation" id="b26-t0-Xf3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B19-Og-1Na">
@@ -531,7 +531,7 @@
                         <viewLayoutGuide key="safeArea" id="ZBf-7D-8kx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Bid" image="plus" catalog="system" id="2ML-c2-xiW"/>
+                    <navigationItem key="navigationItem" id="cQ3-bB-E7S"/>
                     <connections>
                         <outlet property="addressError" destination="bHc-Ct-u0c" id="MGd-nS-9DR"/>
                         <outlet property="addressField" destination="B19-Og-1Na" id="z1L-gB-TMg"/>
@@ -546,27 +546,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0K-qW-VTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="-994"/>
+            <point key="canvasLocation" x="4649.6183206106871" y="-994.36619718309862"/>
         </scene>
         <!--CreateBidConfirmationScreen-->
         <scene sceneID="gUt-KK-eEh">
             <objects>
                 <viewController title="CreateBidConfirmationScreen" id="C8b-df-dVD" customClass="CreateBidConfirmationController" customModule="BidMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZw-7P-Rf5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Confirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Vo-rh-1o2">
-                                <rect key="frame" x="39.333333333333329" y="80" width="314.33333333333331" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Confirmation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Vo-rh-1o2">
+                                <rect key="frame" x="39" y="123" width="314.33333333333331" height="512.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W00-HR-8ON">
-                                <rect key="frame" x="39" y="612" width="338" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W00-HR-8ON">
+                                <rect key="frame" x="27" y="643.66666666666663" width="338" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
                                 <connections>
@@ -576,6 +574,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="grP-dN-nnD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Vo-rh-1o2" firstAttribute="leading" secondItem="grP-dN-nnD" secondAttribute="leading" constant="39" id="31n-ZU-wGP"/>
+                            <constraint firstItem="2Vo-rh-1o2" firstAttribute="top" secondItem="grP-dN-nnD" secondAttribute="top" constant="20" id="8kE-VP-jeB"/>
+                            <constraint firstItem="W00-HR-8ON" firstAttribute="top" secondItem="2Vo-rh-1o2" secondAttribute="bottom" constant="8" id="Bkj-4f-y7k"/>
+                            <constraint firstItem="W00-HR-8ON" firstAttribute="leading" secondItem="grP-dN-nnD" secondAttribute="leading" constant="27" id="K1K-IT-qHv"/>
+                            <constraint firstItem="grP-dN-nnD" firstAttribute="bottom" secondItem="W00-HR-8ON" secondAttribute="bottom" constant="91" id="LGq-wM-8BS"/>
+                            <constraint firstItem="grP-dN-nnD" firstAttribute="trailing" secondItem="W00-HR-8ON" secondAttribute="trailing" constant="28" id="Ung-dm-IbR"/>
+                            <constraint firstItem="grP-dN-nnD" firstAttribute="trailing" secondItem="2Vo-rh-1o2" secondAttribute="trailing" constant="39.670000000000002" id="ljf-2G-mcM"/>
+                            <constraint firstItem="W00-HR-8ON" firstAttribute="top" secondItem="2Vo-rh-1o2" secondAttribute="bottom" constant="8" id="vmo-DY-bX9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NRa-XT-pMV"/>
                     <connections>
@@ -585,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQi-Th-zQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4490.8396946564881" y="-994.36619718309862"/>
+            <point key="canvasLocation" x="5658.7786259541981" y="-994.36619718309862"/>
         </scene>
         <!--Your Listings-->
         <scene sceneID="vd5-84-HH7">
@@ -1501,6 +1509,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ro0-Jy-4vG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-429.7709923664122" y="154.92957746478874"/>
+        </scene>
+        <!--Create Bid-->
+        <scene sceneID="tMC-Nx-4ob">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xZG-yt-VWa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Create Bid" image="plus" catalog="system" id="2ML-c2-xiW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iuf-og-IeJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rD6-mi-GbU" kind="relationship" relationship="rootViewController" id="rpV-Bh-IZs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8h-tU-05T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3722.9007633587785" y="-994.36619718309862"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

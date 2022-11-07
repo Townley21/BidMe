@@ -82,7 +82,7 @@ class PlacedBidsController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.nameLabel?.text = nameData[indexPath.row]
         cell.addressLabel?.text = addressData[indexPath.row]
-        //cell.bidCountLabel?.text = "$363.54"
+        cell.bidCountLabel?.text = "$363.54"
         cell.descriptionLabel?.text = lorem
         return cell
     }

@@ -48,6 +48,20 @@
                             <constraint firstAttribute="height" constant="114" id="F7J-rk-reK"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Bid:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-h5-jLW">
+                        <rect key="frame" x="220" y="11" width="94" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount$" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmR-Ou-BR3">
+                        <rect key="frame" x="297" y="10" width="136" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
@@ -69,6 +83,8 @@
             <color key="tintColor" red="0.062468536200000001" green="0.15130436420000001" blue="0.23138260839999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="addressLabel" destination="fk2-W3-7Bm" id="YNH-4y-jhN"/>
+                <outlet property="bidCountLabel" destination="OmR-Ou-BR3" id="nCg-xR-2Vi"/>
+                <outlet property="bidStaticLabel" destination="KOr-h5-jLW" id="n08-4y-cc1"/>
                 <outlet property="descriptionLabel" destination="XXv-ew-s9E" id="I6w-if-OHq"/>
                 <outlet property="nameLabel" destination="gfZ-dx-sGZ" id="nxN-Zv-yNr"/>
             </connections>
