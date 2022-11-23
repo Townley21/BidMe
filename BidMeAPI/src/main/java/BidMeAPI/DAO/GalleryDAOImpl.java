@@ -26,7 +26,7 @@ public class GalleryDAOImpl {
     }
 
     @Override
-    public Gallery createGallery(Gallery gallery) throws SQLException{
+    public Gallery createGallery(Gallery gallery) throws SQLException {
 
         int galleryID = gallery.getGalleryID();
         int entryID = gallery.getEntryID();
@@ -48,10 +48,10 @@ public class GalleryDAOImpl {
     }
 
     @Override
-    public Gallery getGallery(int galleryID) throws SQLException{
+    public Gallery getGallery(int ID) throws SQLException{
 
         Gallery gallery = null;
-        int galleryID = galleryID;
+        int galleryID = ID;
         Listing listing;
 
         Connection conn = connectToDB();
