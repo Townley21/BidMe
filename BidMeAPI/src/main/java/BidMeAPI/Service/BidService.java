@@ -1,12 +1,12 @@
-package BidMeAPI.DAO;
+package BidMeAPI.Service;
 
 import java.sql.SQLException;
 
 import BidMeAPI.Model.Bid;
 
-public interface BidTableDAO {
-	
-	public Bid createBid(Bid bid) throws SQLException;
+public interface BidService {
+
+public Bid createBid(Bid bid) throws SQLException;
 	
 	public Bid getBid(int id) throws SQLException;
 	

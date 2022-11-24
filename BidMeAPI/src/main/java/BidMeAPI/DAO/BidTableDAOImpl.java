@@ -11,10 +11,10 @@ import BidMeAPI.Model.User;
 
 public class BidTableDAOImpl implements BidTableDAO {
 	
-	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bid-id, user-id, price, null-bids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
-	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bid-id = ?;";
-	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bid-id = ?;";
-	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET user-id = ?, price = ?, null-bids = ?, timestamp = ? bid-id = ?;";
+	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bidID, userID, price, null-bids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
+	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bidID = ?;";
+	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bidID = ?;";
+	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET userID = ?, price = ?, null-bids = ?, timestamp = ? bidID = ? WHERE bidID = ?;";
 
 	UsersListDAOImpl userDAO = new UsersListDAOImpl();
 	
@@ -66,10 +66,10 @@ public class BidTableDAOImpl implements BidTableDAO {
 		ResultSet rs = ps.executeQuery();
 		
 		while (rs.next()) {
-			bidID = rs.getInt("bid-id");
-			user = userDAO.getUser(rs.getInt("user-id"));
+			bidID = rs.getInt("bidID");
+			user = userDAO.getUser(rs.getInt("userID"));
 			price = rs.getDouble("price");
-			bids = rs.getBoolean("null-bids");
+			bids = rs.getBoolean("nullBids");
 			timestamp = rs.getTimestamp("timestamp");
 			
 			getbid = new Bid(user, bidID, price, bids, timestamp);
@@ -88,14 +88,15 @@ public class BidTableDAOImpl implements BidTableDAO {
 	}
 
 	@Override
-	public void updateVid(Bid bid) throws SQLException {
+	public void updateBid(Bid bid) throws SQLException {
 		
 		Connection conn = connectToDB();
-		PreparedStatement ps = conn.prepareStatement(UPDATE_BID);
+		PreparedStatement ps = conn.prepareStatement(UPDATE_BID);	
 		ps.setInt(1, bid.getUser().getUserID());
 		ps.setDouble(2, bid.getPrice());
 		ps.setBoolean(3, bid.getNullBids());
 		ps.setTimestamp(4, bid.getTimestamp());
+		ps.setInt(5, bid.getBidID());
 		
 		
 	}
