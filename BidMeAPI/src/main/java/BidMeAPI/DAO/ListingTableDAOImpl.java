@@ -16,8 +16,11 @@ public class ListingTableDAOImpl implements ListingTableDAO {
     final static String CREATE_LISTING = "INSERT INTO BidMeUsers.listingTable " + "(listingID, userID, contractorUserID, title, address, galleryID, price) VALUES" + "(?, ?, ?, ?, ?, ?, ?);";
     final static String GET_LISTING = "SELECT * FROM BidMeUsers.listingTable WHERE userID = ?;";
     final static String DELETE_LISTING = "DELETE FROM BidMeUsers.listingTable WHERE listingID = ?;";
-    final static String UPDATE_LISTING = "UPDATE BidMeUsers.listingTable SET contractorID = ?, title = ?, address = ?, galleryID = ?, price = ? WHERE listingID = ?;";
+    final static String UPDATE_LISTING = "UPDATE BidMeUsers.listingTable SET contractorUserID = ?, title = ?, address = ?, galleryID = ?, price = ? WHERE listingID = ?;";
 
+    final static String KEY_CHECK_DISABLE = "SET FOREIGN_KEY_CHECKS=0;";
+    final static String KEY_CHECK_ENABLE = "SET FOREIGN_KEY_CHECKS=1;";
+    
     @Autowired
     UsersListDAO dao;
     
@@ -120,7 +123,9 @@ public class ListingTableDAOImpl implements ListingTableDAO {
         Connection conn = connectToDB();
         PreparedStatement preparedStatement = conn.prepareStatement(UPDATE_LISTING);
         
-        preparedStatement.setInt(1, listing.getContractorID());
+        
+        if(listing.getContractor() == null) 	preparedStatement.setNull(1, java.sql.Types.NULL);
+		else 									preparedStatement.setInt(1, listing.getContractor().getUserID());
         preparedStatement.setString(2, listing.getTitle());
         preparedStatement.setString(3, listing.getAddress());
         preparedStatement.setInt(4, listing.getGalleryID());
@@ -132,15 +137,20 @@ public class ListingTableDAOImpl implements ListingTableDAO {
     }
 
     @Override
-    public void deleteListing(Listing listing) throws SQLException{
+    public void deleteListing(int listingID) throws SQLException{
 
-        int listingID = listing.getListingID();
+        int id = listingID;
 
         Connection conn = connectToDB();
+        PreparedStatement disable = conn.prepareStatement(KEY_CHECK_DISABLE);
+        disable.executeUpdate();
+        
         PreparedStatement preparedStatement = conn.prepareStatement(DELETE_LISTING);
-        preparedStatement.setInt(1, listingID);
-
+        preparedStatement.setInt(1, id);
         preparedStatement.executeUpdate();
+        
+        PreparedStatement enable = conn.prepareStatement(KEY_CHECK_ENABLE);
+        enable.executeUpdate();
 
         return;
     }
