@@ -4,14 +4,16 @@ public class Listing {
 
     private int listingID;
     private User user;
+    private User contractor;
     private String title;
     private String address;
     private int galleryID;
     private Double price;
 
-    public Listing(int listingID, User user, String title, String address, int galleryID, double price) {
+    public Listing(int listingID, User user, User contractor, String title, String address, int galleryID, double price) {
         this.listingID = listingID;
         this.user = user;
+        this.contractor = contractor;
         this.title = title;
         this.address = address;
         this.galleryID = galleryID;
@@ -26,8 +28,8 @@ public class Listing {
         this.listingID = listingID;
     }
 
-    public int getUserID() {
-        return user.getUserID();
+    public User getUser() {
+        return user;
     }
 
     public void setUser(User user) {
@@ -65,5 +67,13 @@ public class Listing {
     public void setPrice(double price) {
         this.price = price;
     }
+
+	public User getContractor() {
+		return contractor;
+	}
+
+	public void setContractor(User contractor) {
+		this.contractor = contractor;
+	}
 
 }

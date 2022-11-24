@@ -14,7 +14,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 	final static String CREATE_USER = "INSERT INTO BidMeUsers.usersList " + "(userID, name, email, password, address, contractor) VALUES" + "(?, ?, ?, ?, ?, ?);";
 	final static String GET_USER = "SELECT * FROM BidMeUsers.usersList WHERE email = ?;";
 	final static String DELETE_USER = "DELETE FROM BidMeUsers.usersList WHERE userID = ?;";
-	final static String UPDATE_USER = "UPDATE BidMeUsers.usersList SET name = ?, email = ?, password = ?, address = ?, contractor = ?, WHERE userID = ?;";
+	final static String UPDATE_USER = "UPDATE BidMeUsers.usersList SET name = ?, email = ?, password = ?, address = ?, contractor = ? WHERE userID = ?;";
 	
 	public Connection connectToDB() throws SQLException {
 		

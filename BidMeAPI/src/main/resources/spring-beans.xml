@@ -14,5 +14,10 @@
     
     	<bean id  = "UsersListDAO" class="BidMeAPI.DAO.UsersListDAOImpl"></bean>
     	<bean id = "UserService" class="BidMeAPI.Service.UserServiceImpl"></bean>
+    	
+    	<bean id = "ListingTableDAO" class="BidMeAPI.DAO.ListingTableDAOImpl"></bean>
+    	<bean id = "ActiveListingService" class="BidMeAPI.Service.ActiveListingServiceImpl"></bean>
+    	
+    	
     
 </beans>
