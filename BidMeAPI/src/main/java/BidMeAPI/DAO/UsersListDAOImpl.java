@@ -12,7 +12,8 @@ import BidMeAPI.Model.User;
 public class UsersListDAOImpl implements UsersListDAO {
 
 	final static String CREATE_USER = "INSERT INTO BidMeUsers.usersList " + "(userID, name, email, password, address, contractor) VALUES" + "(?, ?, ?, ?, ?, ?);";
-	final static String GET_USER = "SELECT * FROM BidMeUsers.usersList WHERE email = ?;";
+	final static String GET_USER_BY_EMAIL = "SELECT * FROM BidMeUsers.usersList WHERE email = ?;";
+	final static String GET_USER_BY_ID = "SELECT * FROM BidMeUsers.usersList WHERE userID = ?;";
 	final static String DELETE_USER = "DELETE FROM BidMeUsers.usersList WHERE userID = ?;";
 	final static String UPDATE_USER = "UPDATE BidMeUsers.usersList SET name = ?, email = ?, password = ?, address = ?, contractor = ? WHERE userID = ?;";
 	
@@ -22,7 +23,6 @@ public class UsersListDAOImpl implements UsersListDAO {
 		
 		return conn;
 	}
-	
 	
 	@Override
 	public User createuser(User user) throws SQLException {
@@ -62,7 +62,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 		boolean contractor;
 		
 		Connection conn = connectToDB();
-		PreparedStatement preparedStatement = conn.prepareStatement(GET_USER);
+		PreparedStatement preparedStatement = conn.prepareStatement(GET_USER_BY_EMAIL);
 		preparedStatement.setString(1, userEmail);
 		
 		ResultSet rs = preparedStatement.executeQuery();
@@ -95,7 +95,7 @@ public class UsersListDAOImpl implements UsersListDAO {
 		boolean contractor;
 		
 		Connection conn = connectToDB();
-		PreparedStatement preparedStatement = conn.prepareStatement(GET_USER);
+		PreparedStatement preparedStatement = conn.prepareStatement(GET_USER_BY_ID);
 		preparedStatement.setInt(1, userID);
 		
 		ResultSet rs = preparedStatement.executeQuery();

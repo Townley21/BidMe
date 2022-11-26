@@ -13,7 +13,7 @@ public interface ActiveListingService {
 
     public void updateListing(Listing listing) throws SQLException;
 
-    public void deleteListing(Listing listing) throws SQLException;
+    public void deleteListing(int id) throws SQLException;
 
 
 }

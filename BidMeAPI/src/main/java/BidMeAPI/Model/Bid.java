@@ -7,15 +7,13 @@ public class Bid {
 	private int bidID;
 	private User user;
 	private double price;
-	private boolean nullBids;
 	private Timestamp timestamp;
 	
-	public Bid(User user, int bidID, double price, boolean nullBids, Timestamp timestamp) {
+	public Bid(User user, int bidID, double price, Timestamp timestamp) {
 		super();
 		this.user = user;
 		this.bidID = bidID;
 		this.price = price;
-		this.nullBids = nullBids;
 		this.timestamp = timestamp;
 	}
 	
@@ -41,14 +39,6 @@ public class Bid {
 	
 	public void setPrice(double price) {
 		this.price = price;
-	}
-	
-	public boolean getNullBids() {
-		return nullBids;
-	}
-	
-	public void setNullBids(boolean nullBids) {
-		this.nullBids = nullBids;
 	}
 	
 	public Timestamp getTimestamp() {

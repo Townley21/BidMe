@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import BidMeAPI.Model.Matchmaker;
 
-public class matchmakerDAOImpl implements matchmakerDAO {
+public class MatchmakerDAOImpl implements matchmakerDAO {
 	
 	final static String CREATE_MATCHMAKER = "INSERT INTO BidMeUsers.matchmaker " + "(mm-id, bid-id, listing-id) VALUES" + "(?, ?, ?);";
 	final static String DELETE_MATCHMAKER = "DELETE FROM BidMeUsers.matchmaker WHERE mm-id = ?";

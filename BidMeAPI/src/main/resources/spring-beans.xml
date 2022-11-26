@@ -18,6 +18,9 @@
     	<bean id = "ListingTableDAO" class="BidMeAPI.DAO.ListingTableDAOImpl"></bean>
     	<bean id = "ActiveListingService" class="BidMeAPI.Service.ActiveListingServiceImpl"></bean>
     	
+    	<bean id ="BidTableDAO" class="BidMeAPI.DAO.BidTableDAOImpl"></bean>
+    	<bean id ="BidService" class="BidMeAPI.Service.BidServiceImpl"></bean>
+    	
     	
     
 </beans>

@@ -13,6 +13,6 @@ public interface ListingTableDAO {
 
     public void updateListing(Listing listing) throws SQLException;
 
-    public void deleteListing(Listing listing) throws SQLException;
+    public void deleteListing(int listingID) throws SQLException;
 
 }

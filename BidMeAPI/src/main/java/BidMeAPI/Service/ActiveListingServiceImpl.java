@@ -31,8 +31,8 @@ public class ActiveListingServiceImpl implements ActiveListingService {
     	dao.updateListing(listing);
     }
 
-    public void deleteListing(Listing listing) throws SQLException {
-    	dao.deleteListing(listing);
+    public void deleteListing(int id) throws SQLException {
+    	dao.deleteListing(id);
     }
 
 
