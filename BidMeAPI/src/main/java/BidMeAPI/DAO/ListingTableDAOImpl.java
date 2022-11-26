@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ListingTableDAOImpl implements ListingTableDAO {
 
     final static String CREATE_LISTING = "INSERT INTO BidMeUsers.listingTable " + "(listingID, userID, contractorUserID, title, address, galleryID, price) VALUES" + "(?, ?, ?, ?, ?, ?, ?);";
-    final static String GET_LISTING = "SELECT * FROM BidMeUsers.listingTable WHERE userID = ?;";
+    final static String GET_LISTING = "SELECT * FROM BidMeUsers.listingTable WHERE listingID = ?;";
     final static String DELETE_LISTING = "DELETE FROM BidMeUsers.listingTable WHERE listingID = ?;";
     final static String UPDATE_LISTING = "UPDATE BidMeUsers.listingTable SET contractorUserID = ?, title = ?, address = ?, galleryID = ?, price = ? WHERE listingID = ?;";
 
@@ -63,16 +63,11 @@ public class ListingTableDAOImpl implements ListingTableDAO {
     
     //Might have to change parameters
     @Override
-    public Listing getListing(int posterID) throws SQLException{
-    	
-    	if(dao.getUser(posterID) == null) {
-    		System.out.println("No listings from user with id: " + posterID);
-    		return null;
-    	}
-
+    public Listing getListing(int ID) throws SQLException{
+    
         Listing listing = null;
-        int listingID;
-        Integer userID = posterID;
+        int listingID = ID;
+        int userID;
         Integer contractorID;
         User user = null;
         User contractor = null;
@@ -84,18 +79,13 @@ public class ListingTableDAOImpl implements ListingTableDAO {
 
         Connection conn = connectToDB();
         PreparedStatement preparedStatement = conn.prepareStatement(GET_LISTING);
-        preparedStatement.setInt(1, userID);
+        preparedStatement.setInt(1, listingID);
 
         ResultSet rs = preparedStatement.executeQuery();
 
         while(rs.next()) {
             listingID = rs.getInt("listingID");
-            
-            userID = rs.getInt("userID");
-            
-            if(userID != null)
-            	user = dao.getUser(userID);
-            
+            user = dao.getUser(rs.getInt("userID"));
             contractorID = rs.getInt("contractorUserID");
             
             if(contractorID != null)
