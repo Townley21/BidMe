@@ -17,10 +17,12 @@
     	
     	<bean id = "ListingTableDAO" class="BidMeAPI.DAO.ListingTableDAOImpl"></bean>
     	<bean id = "ActiveListingService" class="BidMeAPI.Service.ActiveListingServiceImpl"></bean>
+
+    	<bean id  = "matchmakerDAO" class="BidMeAPI.DAO.MatchmakerDAOImpl"></bean>
+    	<bean id = "matchmakerService" class="BidMeAPI.Service.matchmakerServiceImpl"></bean>
     	
     	<bean id ="BidTableDAO" class="BidMeAPI.DAO.BidTableDAOImpl"></bean>
     	<bean id ="BidService" class="BidMeAPI.Service.BidServiceImpl"></bean>
     	
     	
-    
 </beans>
