@@ -28,21 +28,37 @@ public class BidRestController {
 		
 	}
 	
-	//UPDATE
-	@GetMapping("/api/bids/update/{bidID},{userID},{price},{nullBids},{timestamp}")
+	//UPDATE - works
+	@GetMapping("/api/bids/update/{bidID},{userID},{price},{timestamp}")
 	public void updateBid(	@PathVariable int bidID,
 							@PathVariable int userID,
 							@PathVariable double price,
-							@PathVariable boolean nullBids,
 							@PathVariable Timestamp timestamp) throws SQLException {
 		
-		Bid bid = new Bid(user_ser.getUser(userID), bidID, price, nullBids, timestamp);
+		Bid bid = new Bid(user_ser.getUser(userID), bidID, price, timestamp);
 		service.updateBid(bid);
 		return;
 	}
 	
-	//CREATE
+	//CREATE - works
+	@GetMapping("/api/bids/create/{bidID},{userID},{price},{timestamp}")
+	public void createBid(	@PathVariable int bidID,
+							@PathVariable int userID,
+							@PathVariable double price,
+							@PathVariable Timestamp timestamp) throws SQLException {
+		
+		Bid bid = new Bid(user_ser.getUser(userID), bidID, price, timestamp);
+		service.createBid(bid);
+		return;
+	}
 	
-	//DELETE
+	//DELETE - works
+	@GetMapping("/api/bids/delete/{id}")
+	public void deleteBid(@PathVariable int id) throws SQLException {
+		service.deleteBid(id);
+		return;
+		
+	}
+	
 
 }

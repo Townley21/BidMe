@@ -24,7 +24,6 @@ public class UsersListDAOImpl implements UsersListDAO {
 		return conn;
 	}
 	
-	
 	@Override
 	public User createuser(User user) throws SQLException {
 		

@@ -11,10 +11,10 @@ import BidMeAPI.Model.User;
 
 public class BidTableDAOImpl implements BidTableDAO {
 	
-	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bidID, userID, price, null-bids, timestamp) VALUES" + "(?, ?, ?, ?, ?);";
+	final static String CREATE_BID = "INSERT INTO BidMeUsers.bidTable " + "(bidID, userID, price, timestamp) VALUES" + "(?, ?, ?, ?);";
 	final static String GET_BID = "SELECT * FROM BidMeUsers.bidTable WHERE bidID = ?;";
 	final static String DELETE_BID = "DELETE FROM BidMeUsers.bidTable WHERE bidID = ?;";
-	final static String UPDATE_BID = "UPDATE BidMeUsers.listingTable SET userID = ?, price = ?, null-bids = ?, timestamp = ? bidID = ? WHERE bidID = ?;";
+	final static String UPDATE_BID = "UPDATE BidMeUsers.bidTable SET userID = ?, price = ?, nullBids = ?, timestamp = ? WHERE bidID = ?;";
 
 	UsersListDAOImpl userDAO = new UsersListDAOImpl();
 	
@@ -31,9 +31,8 @@ public class BidTableDAOImpl implements BidTableDAO {
 		int bidID = bid.getBidID();
 		User user = bid.getUser();
 		double price = bid.getPrice();
-		boolean bids = bid.getNullBids();
 		Timestamp timestamp = bid.getTimestamp();
-		Bid newbid = new Bid(user, bidID, price, bids, timestamp);
+		Bid newbid = new Bid(user, bidID, price, timestamp);
 		
 		Connection conn = connectToDB();
 		PreparedStatement ps = conn.prepareStatement(CREATE_BID);
@@ -41,10 +40,9 @@ public class BidTableDAOImpl implements BidTableDAO {
 		ps.setInt(1, bidID);
 		ps.setInt(2, user.getUserID());
 		ps.setDouble(3, price);
-		ps.setBoolean(4, bids);
-		ps.setTimestamp(5, timestamp);
+		ps.setTimestamp(4, timestamp);
 		
-		ps.executeQuery();
+		ps.executeUpdate();
 		
 		return newbid;
 	}
@@ -56,7 +54,6 @@ public class BidTableDAOImpl implements BidTableDAO {
 		int bidID = id;
 		User user;
 		double price;
-		boolean bids;
 		Timestamp timestamp;
 		
 		Connection conn = connectToDB();
@@ -69,10 +66,9 @@ public class BidTableDAOImpl implements BidTableDAO {
 			bidID = rs.getInt("bidID");
 			user = userDAO.getUser(rs.getInt("userID"));
 			price = rs.getDouble("price");
-			bids = rs.getBoolean("nullBids");
 			timestamp = rs.getTimestamp("timestamp");
 			
-			getbid = new Bid(user, bidID, price, bids, timestamp);
+			getbid = new Bid(user, bidID, price, timestamp);
 		}
 		return getbid;
 	}
@@ -94,11 +90,10 @@ public class BidTableDAOImpl implements BidTableDAO {
 		PreparedStatement ps = conn.prepareStatement(UPDATE_BID);	
 		ps.setInt(1, bid.getUser().getUserID());
 		ps.setDouble(2, bid.getPrice());
-		ps.setBoolean(3, bid.getNullBids());
-		ps.setTimestamp(4, bid.getTimestamp());
-		ps.setInt(5, bid.getBidID());
+		ps.setTimestamp(3, bid.getTimestamp());
+		ps.setInt(4, bid.getBidID());
 		
-		
+		ps.executeUpdate();
 	}
 
 }
