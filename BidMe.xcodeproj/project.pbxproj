@@ -10,7 +10,7 @@
 		0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BB0432907719100661C2B /* LoginViewController.swift */; };
 		0B48D0E8290F28FA0044CEA0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */; };
 		0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B48D0E929130BC00044CEA0 /* Assets.xcassets */; };
-		0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AB8A128D1A35100263029 /* Assets.xcassets */; };
+		0B82F41C28FCCA4C00C1033D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		512CC3502911DBF00004ED95 /* AvailListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC34F2911DBF00004ED95 /* AvailListingsViewController.swift */; };
 		512CC3522911DD320004ED95 /* AvailListingsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC3512911DD320004ED95 /* AvailListingsDetailsController.swift */; };
 		512CC3542911DF7F0004ED95 /* ContractorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CC3532911DF7F0004ED95 /* ContractorProfileViewController.swift */; };
@@ -48,7 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		0B3BB0432907719100661C2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B48D0E7290F28FA0044CEA0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0B48D0E929130BC00044CEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,7 +123,6 @@
 				516AB89A28D1A35000263029 /* SceneDelegate.swift */,
 				5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */,
 				512CC3532911DF7F0004ED95 /* ContractorProfileViewController.swift */,
-				5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */,
 				5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */,
 				512CC34F2911DBF00004ED95 /* AvailListingsViewController.swift */,
 				51E6FEA029126E55001BEFCF /* PlacedBidsController.swift */,
@@ -229,7 +227,7 @@
 				5FB31F3428F4C1FD000F92AA /* ListingTableViewCell.xib in Resources */,
 				0B48D0EA29130BC00044CEA0 /* Assets.xcassets in Resources */,
 				51E6FE9D2912426B001BEFCF /* ListingPhotoCollectionViewCell.xib in Resources */,
-				0B82F41C28FCCA4C00C1033D /* Assets.xcassets in Resources */,
+				0B82F41C28FCCA4C00C1033D /* (null) in Resources */,
 				51A17156291316D700176D8B /* BidsPlacedListCell.xib in Resources */,
 				5FC7414C28FC8AA900182778 /* HistoryViewCell.xib in Resources */,
 			);

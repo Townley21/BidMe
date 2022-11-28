@@ -149,9 +149,9 @@ class LoginViewController: UIViewController, UITextViewDelegate {
             print("--Data retrieved from DB---\n")
             print(data)
             //Have data
-            var result: Response?
+            var result: User?
             do {
-                result = try JSONDecoder().decode(Response.self, from: data)
+                result = try JSONDecoder().decode(User.self, from: data)
             }
             catch {
                 print("failed to convert: \(error)")
@@ -161,12 +161,12 @@ class LoginViewController: UIViewController, UITextViewDelegate {
                 return
             }
             
-            print(json.results.userID!)
-            print(json.results.name!)
-            print(json.results.email!)
-            print(json.results.password!)
-            print(json.results.address!)
-            print(json.results.contractor!)
+            print(json.userID!)
+            print(json.name!)
+            print(json.email!)
+            print(json.password!)
+            print(json.address!)
+            print(json.contractor!)
         })
         
         task.resume()
@@ -174,12 +174,7 @@ class LoginViewController: UIViewController, UITextViewDelegate {
 }
 
 let url = "http://localhost:8080/api/users/get/norm@gmail.com"
-struct Response: Codable {
-    let results: MyResult
-    let status: String
-}
-
-struct MyResult: Codable {
+struct User: Codable {
     let userID: Int?
     let name: String?
     let email: String?
