@@ -24,5 +24,8 @@
     	<bean id ="BidTableDAO" class="BidMeAPI.DAO.BidTableDAOImpl"></bean>
     	<bean id ="BidService" class="BidMeAPI.Service.BidServiceImpl"></bean>
     	
+    	<bean id = "GalleryDAO" class="BidMeAPI.DAO.GalleryDAOImpl"></bean>
+    	<bean id = "GalleryService" class="BidMeAPI.Service.GalleryServiceImpl"></bean>
+    	
     	
 </beans>
