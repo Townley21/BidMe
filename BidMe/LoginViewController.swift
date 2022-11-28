@@ -29,6 +29,7 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getUser(from: url)
         resetForm()
     }
     
@@ -135,4 +136,54 @@ class LoginViewController: UIViewController, UITextViewDelegate {
             loginButton.isEnabled = false
         }
     }
+    
+    private func getUser(from url: String) {
+        
+        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, respone, error in
+            
+            guard let data = data, error == nil else {
+                print("Something went wrong")
+                return
+            }
+            
+            print("--Data retrieved from DB---\n")
+            print(data)
+            //Have data
+            var result: Response?
+            do {
+                result = try JSONDecoder().decode(Response.self, from: data)
+            }
+            catch {
+                print("failed to convert: \(error)")
+            }
+            
+            guard let json = result else {
+                return
+            }
+            
+            print(json.results.userID!)
+            print(json.results.name!)
+            print(json.results.email!)
+            print(json.results.password!)
+            print(json.results.address!)
+            print(json.results.contractor!)
+        })
+        
+        task.resume()
+    }
+}
+
+let url = "http://localhost:8080/api/users/get/norm@gmail.com"
+struct Response: Codable {
+    let results: MyResult
+    let status: String
+}
+
+struct MyResult: Codable {
+    let userID: Int?
+    let name: String?
+    let email: String?
+    let password: String?
+    let address: String?
+    let contractor: Bool?
 }
