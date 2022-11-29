@@ -29,6 +29,8 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        var user: User = User()
+        user = UserController.getUser(from: "BidMe@gmail.com")
         resetForm()
     }
     
@@ -135,4 +137,7 @@ class LoginViewController: UIViewController, UITextViewDelegate {
             loginButton.isEnabled = false
         }
     }
+    
+   
 }
+
