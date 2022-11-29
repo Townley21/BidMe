@@ -30,7 +30,10 @@ class LoginViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         var user: User = User()
+        var listings: [Listing]
         user = UserController.getUser(from: "BidMe@gmail.com")
+        listings = ListingController.getAllListingsByUserID(from: "1")
+        print(listings)
         resetForm()
     }
     

@@ -30,6 +30,8 @@
 		51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CE92914E074006B6BA6 /* InquireViewController.swift */; };
 		51E83CEC2914ECD3006B6BA6 /* ActiveJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */; };
 		51E83CEE2914EF20006B6BA6 /* ContractorInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */; };
+		5F75DA1E2935FA0D00FC2439 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F75DA1D2935FA0D00FC2439 /* Listing.swift */; };
+		5F75DA202935FA8000FC2439 /* ListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F75DA1F2935FA8000FC2439 /* ListingController.swift */; };
 		5F88E5D129357FB8002BC356 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88E5D029357FB8002BC356 /* User.swift */; };
 		5F88E5D429358048002BC356 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88E5D329358048002BC356 /* UserController.swift */; };
 		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
@@ -75,6 +77,8 @@
 		51E83CE92914E074006B6BA6 /* InquireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquireViewController.swift; sourceTree = "<group>"; };
 		51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobsViewController.swift; sourceTree = "<group>"; };
 		51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInvoiceViewController.swift; sourceTree = "<group>"; };
+		5F75DA1D2935FA0D00FC2439 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		5F75DA1F2935FA8000FC2439 /* ListingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingController.swift; sourceTree = "<group>"; };
 		5F88E5D029357FB8002BC356 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5F88E5D329358048002BC356 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				5F88E5D029357FB8002BC356 /* User.swift */,
+				5F75DA1D2935FA0D00FC2439 /* Listing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5F88E5D329358048002BC356 /* UserController.swift */,
+				5F75DA1F2935FA8000FC2439 /* ListingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			files = (
 				F82CEE75291452E600641921 /* EditInvoiceCell.swift in Sources */,
 				5130FA6E28FA840F00E5D18B /* CreateBidConfirmationController.swift in Sources */,
+				5F75DA1E2935FA0D00FC2439 /* Listing.swift in Sources */,
 				5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */,
+				5F75DA202935FA8000FC2439 /* ListingController.swift in Sources */,
 				51E6FEA129126E55001BEFCF /* PlacedBidsController.swift in Sources */,
 				516AB89928D1A35000263029 /* AppDelegate.swift in Sources */,
 				0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */,
