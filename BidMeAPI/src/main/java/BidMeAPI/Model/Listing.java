@@ -9,8 +9,9 @@ public class Listing {
     private String address;
     private int galleryID;
     private Double price;
+    private String desc;
 
-    public Listing(int listingID, User user, User contractor, String title, String address, int galleryID, double price) {
+    public Listing(int listingID, User user, User contractor, String title, String address, int galleryID, double price, String desc) {
         this.listingID = listingID;
         this.user = user;
         this.contractor = contractor;
@@ -18,6 +19,7 @@ public class Listing {
         this.address = address;
         this.galleryID = galleryID;
         this.price = price;
+        this.desc = desc;
     }
 
     public int getListingID() {
@@ -74,6 +76,14 @@ public class Listing {
 
 	public void setContractor(User contractor) {
 		this.contractor = contractor;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
 }
