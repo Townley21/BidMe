@@ -8,25 +8,11 @@
 
 import Foundation
 
-struct UserData: Decodable {
-    let users: [User]
-    
-    private enum CodingKeys: String, CodingKey {
-    case users = "results"
-    }
-}
-
-
-struct User: Decodable {
-    
-    let userID: Int?
-    let name: String?
-    let email: String?
-    let password: String?
-    let address: String?
-    let contractor: bool?
-    
-    private enum CodingKeys: String, CodingKey {
-        
-    }
+struct User: Codable {
+    var userID: Int?
+    var name: String?
+    var email: String?
+    var password: String?
+    var address: String?
+    var contractor: Bool?
 }

@@ -29,6 +29,8 @@
 		51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CE92914E074006B6BA6 /* InquireViewController.swift */; };
 		51E83CEC2914ECD3006B6BA6 /* ActiveJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */; };
 		51E83CEE2914EF20006B6BA6 /* ContractorInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */; };
+		5F88E5D129357FB8002BC356 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88E5D029357FB8002BC356 /* User.swift */; };
+		5F88E5D429358048002BC356 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F88E5D329358048002BC356 /* UserController.swift */; };
 		5F8FB9DF28EA2C2F008221CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */; };
 		5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */; };
 		5F8FB9E328EA2D7C008221CB /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */; };
@@ -71,6 +73,8 @@
 		51E83CE92914E074006B6BA6 /* InquireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquireViewController.swift; sourceTree = "<group>"; };
 		51E83CEB2914ECD3006B6BA6 /* ActiveJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobsViewController.swift; sourceTree = "<group>"; };
 		51E83CED2914EF20006B6BA6 /* ContractorInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInvoiceViewController.swift; sourceTree = "<group>"; };
+		5F88E5D029357FB8002BC356 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F88E5D329358048002BC356 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E028EA2CF9008221CB /* CreateBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBidViewController.swift; sourceTree = "<group>"; };
 		5F8FB9E228EA2D7C008221CB /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		516AB89728D1A35000263029 /* BidMe */ = {
 			isa = PBXGroup;
 			children = (
+				5F88E5D22935802D002BC356 /* Controller */,
+				5F88E5CF29357FA4002BC356 /* Model */,
 				516AB89828D1A35000263029 /* AppDelegate.swift */,
 				516AB89A28D1A35000263029 /* SceneDelegate.swift */,
 				5F8FB9DE28EA2C2E008221CB /* ProfileViewController.swift */,
@@ -159,6 +165,22 @@
 				5FC7414A28FC8AA900182778 /* HistoryViewCell.xib */,
 			);
 			path = BidMe;
+			sourceTree = "<group>";
+		};
+		5F88E5CF29357FA4002BC356 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F88E5D029357FB8002BC356 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F88E5D22935802D002BC356 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F88E5D329358048002BC356 /* UserController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +270,11 @@
 				0B3BB0442907719100661C2B /* LoginViewController.swift in Sources */,
 				512CC3522911DD320004ED95 /* AvailListingsDetailsController.swift in Sources */,
 				51E83CEA2914E074006B6BA6 /* InquireViewController.swift in Sources */,
+				5F88E5D129357FB8002BC356 /* User.swift in Sources */,
 				5FC7414E28FC942A00182778 /* InvoiceViewController.swift in Sources */,
 				F8C5B13D2912EDF40027A61D /* ContractorInvoiceViewController.swift in Sources */,
 				5F8FB9E128EA2CF9008221CB /* CreateBidViewController.swift in Sources */,
+				5F88E5D429358048002BC356 /* UserController.swift in Sources */,
 				5F8FB9E528EA2DDD008221CB /* HistoryViewController.swift in Sources */,
 				5FD637D228F25D5400B12BA6 /* ListingDetailsViewController.swift in Sources */,
 				5FC7414B28FC8AA900182778 /* HistoryViewCell.swift in Sources */,
