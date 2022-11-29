@@ -1,6 +1,7 @@
 package BidMeAPI.Service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -33,6 +34,14 @@ public class ActiveListingServiceImpl implements ActiveListingService {
 
     public void deleteListing(int id) throws SQLException {
     	dao.deleteListing(id);
+    }
+    
+    public List<Listing> getAllListingsByUserID(int UserID0) throws SQLException {
+    	return dao.getAllListingsByUserID(UserID0);
+    }
+    
+    public List<Listing> getAllListingsByNullID() throws SQLException {
+    	return dao.getAllListingsByNullID();
     }
 
 

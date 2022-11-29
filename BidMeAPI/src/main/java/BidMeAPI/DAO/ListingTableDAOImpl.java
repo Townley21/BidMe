@@ -1,23 +1,29 @@
 package BidMeAPI.DAO;
 
+import BidMeAPI.Model.Bid;
 import BidMeAPI.Model.Listing;
+import BidMeAPI.Model.Matchmaker;
 import BidMeAPI.Model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 public class ListingTableDAOImpl implements ListingTableDAO {
 
-    final static String CREATE_LISTING = "INSERT INTO BidMeUsers.listingTable " + "(listingID, userID, contractorUserID, title, address, galleryID, price) VALUES" + "(?, ?, ?, ?, ?, ?, ?);";
+    final static String CREATE_LISTING = "INSERT INTO BidMeUsers.listingTable " + "(listingID, userID, contractorUserID, title, address, galleryID, price, desc) VALUES" + "(?, ?, ?, ?, ?, ?, ?, ?);";
     final static String GET_LISTING = "SELECT * FROM BidMeUsers.listingTable WHERE listingID = ?;";
     final static String DELETE_LISTING = "DELETE FROM BidMeUsers.listingTable WHERE listingID = ?;";
-    final static String UPDATE_LISTING = "UPDATE BidMeUsers.listingTable SET contractorUserID = ?, title = ?, address = ?, galleryID = ?, price = ? WHERE listingID = ?;";
-
+    final static String UPDATE_LISTING = "UPDATE BidMeUsers.listingTable SET contractorUserID = ?, title = ?, address = ?, galleryID = ?, price = ?, desc = ? WHERE listingID = ?;";
+    final static String GET_ALL_LISTINGS_BY_USERID = "SELECT * FROM BidMeUsers.listingTable WHERE userID = ?;";
+    final static String GET_ALL_LISTINGS_WHERE_CONTRACTOR_IS_NULL = "SELECT * FROM BidMeUsers.listingTable WHERE contractorUserID IS NULL";
+    
     final static String KEY_CHECK_DISABLE = "SET FOREIGN_KEY_CHECKS=0;";
     final static String KEY_CHECK_ENABLE = "SET FOREIGN_KEY_CHECKS=1;";
     
@@ -30,7 +36,87 @@ public class ListingTableDAOImpl implements ListingTableDAO {
 
         return conn;
     }
+    
+    @Override
+    public List<Listing> getAllListingsByNullID() throws SQLException{
+    	
+    	
+    	List<Listing> listings = new ArrayList<>();
+    	int listingID;
+    	int userID;
+    	Integer contractorID;
+    	String title;
+    	String address;
+    	int galleryID;
+    	double price;
+    	String desc;
+		User contractor;
+		
+		Connection conn = connectToDB();
+		PreparedStatement ps = conn.prepareStatement(GET_ALL_LISTINGS_WHERE_CONTRACTOR_IS_NULL);
+		ResultSet rs = ps.executeQuery();
+		
+		while (rs.next()) {
+			
+			 listingID = rs.getInt("listingID");
+			 userID = rs.getInt("userID");
+			 contractorID = rs.getInt("contractorUserID");
+			 if(contractorID != null) contractorID = (int)contractorID;
+			 title = rs.getString("title");
+			 address = rs.getString("address");
+			 galleryID = rs.getInt("galleryID");
+			 price = rs.getDouble("price");
+			 desc = rs.getString("desc");
+			 
+			 if(dao.getUser(contractorID) == null) 	contractor = null;
+			 else									contractor = dao.getUser(contractorID);
+			 
+			 listings.add(new Listing(listingID, dao.getUser(userID), contractor, title, address, galleryID, price, desc));
+		}
+		
+		return listings;
+    }
 
+    @Override
+    public List<Listing> getAllListingsByUserID(int UserID0) throws SQLException{
+    	
+    	
+    	List<Listing> listings = new ArrayList<>();
+    	int listingID;
+    	int userID = UserID0;
+    	Integer contractorID;
+    	String title;
+    	String address;
+    	int galleryID;
+    	double price;
+    	String desc;
+		User contractor;
+		
+		Connection conn = connectToDB();
+		PreparedStatement ps = conn.prepareStatement(GET_ALL_LISTINGS_BY_USERID);
+		ps.setInt(1, userID);
+		ResultSet rs = ps.executeQuery();
+		
+		while (rs.next()) {
+			
+			 listingID = rs.getInt("listingID");
+			 userID = rs.getInt("userID");
+			 contractorID = rs.getInt("contractorUserID");
+			 if(contractorID != null) contractorID = (int)contractorID;
+			 title = rs.getString("title");
+			 address = rs.getString("address");
+			 galleryID = rs.getInt("galleryID");
+			 price = rs.getDouble("price");
+			 desc = rs.getString("desc");
+			 
+			 if(dao.getUser(contractorID) == null) 	contractor = null;
+			 else									contractor = dao.getUser(contractorID);
+			 
+			 listings.add(new Listing(listingID, dao.getUser(userID), contractor, title, address, galleryID, price, desc));
+		}
+		
+		return listings;
+    }
 
     @Override
     public Listing createListing(Listing listing) throws SQLException {
@@ -42,6 +128,7 @@ public class ListingTableDAOImpl implements ListingTableDAO {
         String address = listing.getAddress();
         int galleryID = listing.getGalleryID();
         double price = listing.getPrice();
+        String desc = listing.getDesc();
 
         Connection connection = connectToDB();
 
@@ -54,6 +141,7 @@ public class ListingTableDAOImpl implements ListingTableDAO {
         preparedStatement.setString(5, address);
         preparedStatement.setLong(6, galleryID);
         preparedStatement.setDouble(7, price);
+        preparedStatement.setString(8, desc);
 
         preparedStatement.executeUpdate();
 
@@ -75,6 +163,7 @@ public class ListingTableDAOImpl implements ListingTableDAO {
         String address;
         int galleryID;
         double price;
+        String desc;
 
 
         Connection conn = connectToDB();
@@ -95,11 +184,12 @@ public class ListingTableDAOImpl implements ListingTableDAO {
             address = rs.getString("address");
             galleryID = rs.getInt("galleryID");
             price = rs.getDouble("price");
+            desc = rs.getString("desc");
             
             
             
 
-            listing = new Listing(listingID, user, contractor, listingTitle, address, galleryID, price);
+            listing = new Listing(listingID, user, contractor, listingTitle, address, galleryID, price, desc);
         }
 
 
@@ -121,6 +211,7 @@ public class ListingTableDAOImpl implements ListingTableDAO {
         preparedStatement.setInt(4, listing.getGalleryID());
         preparedStatement.setDouble(5, listing.getPrice());
         preparedStatement.setInt(6, listing.getListingID());
+        preparedStatement.setString(7, listing.getDesc());
 
         preparedStatement.executeUpdate();
 
