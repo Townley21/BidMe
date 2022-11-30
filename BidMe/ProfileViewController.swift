@@ -33,9 +33,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "Profile"
-        username?.text = "@HGoat23"
-        fullName?.text = "Henry Goat"
-        email?.text = "Henry.goat@gmail.com"
+        //username?.text = "@HGoat23"
+        //fullName?.text = "Henry Goat"
+        //email?.text = "Henry.goat@gmail.com"
         
         //circular image (crops edges off of square photo)
         image.layer.borderWidth = 1

@@ -23,19 +23,16 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    var user: User = User()
+
+    
+    
     //Functions
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var user: User = User()
-        var listings: [Listing] = [Listing()]
-        var listings0: [Listing] = [Listing()]
-        user = UserController.getUser(from: "BidMe@gmail.com")
-        listings0 = ListingController.getAllListingsByNULLID()
-        listings = ListingController.getAllListingsByUserID(from: "1")
-        print(listings0)
         resetForm()
     }
     
@@ -50,7 +47,12 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        user = UserController.getUser(from: emailTF.text!)
         
+        if(user.password != passwordTF.text){
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        }
         resetForm()
     }
     
@@ -143,6 +145,5 @@ class LoginViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-   
 }
 
