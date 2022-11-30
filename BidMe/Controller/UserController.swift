@@ -10,7 +10,6 @@ import Foundation
 
 class UserController {
     
-    
     class func getUser(from email: String)->User {
         
         let url: String = "http://localhost:8080/api/users/get/" + email
@@ -63,7 +62,5 @@ class UserController {
     
         return user
     }
-
     
 }
-
