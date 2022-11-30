@@ -12,6 +12,9 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var tableView: UITableView!
     
+    var listings: [Listing] = [Listing()]
+    var listing: Listing = Listing()
+    
     //ListingData
     let nameData = ["New Roof", "Lawn removal", "concrete slab", "Turf installation", "Painting"]
     let addressData = ["123 fake street", "789 horror avenue", "308 Negra Arroyo Lane", "742 Evergreen Terrace", "P Sherman 42 Wallaby Way"]
@@ -40,12 +43,17 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        listings = ListingController.getAllListingsByUserID(from: "1")
+        
+        
         //Get nib (ListingTableViewCell.nib) and register it to this table
         let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         
+        listing = listings[0]
         //Navbar
         title = "Your Active Listings"
         
@@ -76,7 +84,7 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell",
                                                  for: indexPath) as! ListingTableViewCell
         
-        cell.nameLabel?.text = nameData[indexPath.row]
+        //cell.nameLabel?.text = listings[indexPath.row].title (String)
         cell.addressLabel?.text = addressData[indexPath.row]
         cell.bidCountLabel?.text = "7"
         cell.descriptionLabel?.text = lorem

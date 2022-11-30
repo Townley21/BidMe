@@ -10,8 +10,8 @@ import Foundation
 
 struct Listing: Codable {
     var listingID: Int?
-    var userID: Int?
-    var contractorID: Int?
+    var user: User?
+    var contractor: User?
     var title: String?
     var address: String?
     var galleryID: Int?
