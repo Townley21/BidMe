@@ -8,9 +8,8 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
-class ContractorProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class ContractorProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate{
     
     @IBOutlet var username: UILabel!
     @IBOutlet var fullName: UILabel!
@@ -50,6 +49,9 @@ class ContractorProfileViewController: UIViewController, UITableViewDelegate, UI
         image.layer.cornerRadius = image.frame.height / 2
         image.clipsToBounds = true
         
+        mapView.delegate = self
+        createAnnotations(locations: annotationLocations)
+
         /*
         //History Table setup
         let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
@@ -95,6 +97,25 @@ class ContractorProfileViewController: UIViewController, UITableViewDelegate, UI
         }
     }
     
+    let annotationLocations = [
+        ["title": "Cronies Sports Grill" , "latitude": 34.220220153566146, "longitude": -119.05331693066982],
+        ["title": "Instituiton Ale Company" , "latitude": 34.217176763461964, "longitude": -119.01923559884497],
+        ["title": "Wood Ranch BBQ & Grill" , "latitude": 34.21901201556222, "longitude": -119.05528295282262],
+        ["title": "Cagami Ramen" , "latitude": 34.21875832451282, "longitude": -119.04530720680104],
+        ["title": "Ric's Restaurant and Sports Lounge" , "latitude": 34.236435424231395, "longitude": -119.03776751726916]
+    ]
+    
+    func createAnnotations(locations: [[String: Any]]) {
+        for location in locations {
+            let annotations = MKPointAnnotation()
+            annotations.title = location["title"] as? String
+            annotations.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude: location["longitude"] as! CLLocationDegrees)
+            mapView.addAnnotation(annotations)
+        }
+    }
+
+    
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         manager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -112,6 +133,7 @@ class ContractorProfileViewController: UIViewController, UITableViewDelegate, UI
         }
     }
     
+    
     func render(_ location : CLLocation) {
         
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude);
@@ -126,7 +148,7 @@ class ContractorProfileViewController: UIViewController, UITableViewDelegate, UI
         pin.coordinate = coordinate;
         mapView.addAnnotation(pin);
     }
-
+    */
 
 
 }

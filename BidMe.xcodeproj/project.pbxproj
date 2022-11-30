@@ -177,8 +177,8 @@
 		5F88E5CF29357FA4002BC356 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5F88E5D029357FB8002BC356 /* User.swift */,
 				5F75DA1D2935FA0D00FC2439 /* Listing.swift */,
+				5F88E5D029357FB8002BC356 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
