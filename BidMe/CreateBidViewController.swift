@@ -26,7 +26,7 @@ class CreateBidViewController: UIViewController, UITextFieldDelegate, UITextView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        title = "Create Listing"
         resetForm()
         configureTextFields()
         configureTapGesture()
