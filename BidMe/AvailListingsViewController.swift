@@ -12,6 +12,9 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet var tableView: UITableView!
     
+    var availListings: [Listing] = [Listing()]
+    var availListing: Listing = Listing()
+    
     
     let nameData = ["New Roof", "Lawn removal", "concrete slab", "Turf installation", "Painting"]
     let addressData = ["123 fake street", "789 horror avenue", "308 Negra Arroyo Lane", "742 Evergreen Terrace", "P Sherman 42 Wallaby Way"]
@@ -40,12 +43,17 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        availListings = ListingController.getAllListingsByUserID(from: "1")
+        
+        
         //Get nib (ListingTableViewCell.nib) and register it to this table
         let nib = UINib(nibName: "ListingTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListingTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         
+        availListing = availListings[0]
         //Navbar
         title = "Available Listings"
         
@@ -76,10 +84,11 @@ class AvailListingsViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingTableViewCell",
                                                  for: indexPath) as! ListingTableViewCell
         
-        cell.nameLabel?.text = nameData[indexPath.row]
-        cell.addressLabel?.text = addressData[indexPath.row]
+        
+        cell.nameLabel?.text = availListings[index].title
+        cell.addressLabel?.text = availListings[index].address
         cell.bidCountLabel?.text = "7"
-        cell.descriptionLabel?.text = lorem
+        cell.descriptionLabel?.text = availListings[index].desc
         return cell
     }
 }
